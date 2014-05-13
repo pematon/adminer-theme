@@ -140,7 +140,7 @@
 		background: #f6f6f6;
 
 		#h1 {
-			margin-top: 40px;
+			margin-top: 10px;
 		}
 
 		form, p, h1 * {
@@ -148,7 +148,6 @@
 		}
 
 		h1:before {
-			position: fixed;
 			display: block;
 			width: 30px;
 			height: 30px;
@@ -164,7 +163,7 @@
 			cursor: pointer;
 		}
 
-		&:hover {
+		&.open {
 			width: auto;
 			height: auto;
 			width: @menuWidth;
@@ -173,19 +172,19 @@
 			border-right: 1px solid #ddd;
 			border-bottom: 5px solid #ddd;
 			background: #fff;
-			box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.07);
+			box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.03);
 			z-index: 200;
 			overflow-y: auto;
 		}
 
-		&:hover form, &:hover p, &:hover h1 * {
+		&.open form, &.open p, &.open h1 * {
 			display: block;
 		}
 	}
 }
 
 @media only screen and (max-width: 270px) {
-	#menu:hover {
+	#menu.open {
 		border-right: none;
 	}
 

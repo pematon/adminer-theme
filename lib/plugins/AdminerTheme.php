@@ -34,6 +34,23 @@ class AdminerTheme
 			<link rel="apple-touch-icon" href="images/touchIcon.png"/>
 		<?php endif; ?>
 
+		<script>
+			window.addEventListener("load", function() {
+				var menu = document.getElementById("menu");
+				var button = menu.getElementsByTagName("h1")[0];
+				if (!menu || !button)
+					return;
+
+				button.addEventListener("click", function() {
+					if (menu.className.indexOf(" open") >= 0)
+						menu.className = menu.className.replace(/ *open/, "");
+					else
+						menu.className += " open";
+				}, false);
+			}, false);
+
+		</script>
+
 		<?php
 	}
 }

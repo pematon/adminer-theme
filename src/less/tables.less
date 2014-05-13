@@ -1,0 +1,136 @@
+table {
+	border: 1px solid #ddd;
+	margin: 20px 0 10px 0;
+}
+
+tr {
+	border-bottom: 1px dotted #ddd;
+}
+
+th, td {
+	padding: 4px 10px;
+}
+
+tbody td {
+	vertical-align: top;
+}
+
+thead td, thead th, .odd td, tbody tr:hover td,tbody tr:hover th,
+.js .checkable .checked td, .js .checkable .checked th {
+	background: transparent;
+}
+
+thead tr {
+	background: #f6f6f6;
+	border-bottom: 1px solid #ddd;
+}
+
+thead td, thead th {
+	padding: 7px 10px;
+	background: transparent;
+	text-align: left;
+}
+
+tbody td[align="right"] {
+	text-align: right;
+}
+
+tbody td[align="right"] label.block {
+	text-align: right;
+}
+
+table label.block {
+	padding: 0;
+}
+
+/* Checkable */
+table.checkable > thead th {
+	padding: 0;
+}
+
+table.checkable > thead th a {
+	display: inline-block;
+	padding: 7px 10px;
+}
+
+table.checkable > tbody > tr:hover {
+	background: #f6f6f6;
+}
+
+table.checkable .checked {
+	background: #FBEDE2;
+}
+
+.count {
+	display: table;
+	margin-top: -10px;
+	padding: 5px 10px 7px 10px;
+	border: 1px solid #ddd;
+	border-top: none;
+	border-radius: 0 0 2px 2px;
+	background: #f6f6f6;
+
+	label {
+		margin: 0;
+	}
+}
+
+.pages {
+	left: @menuWidth + 1;
+	right: 0;
+	margin: 0;
+	padding: 0 10px;
+	border: none;
+	border-top: 1px solid #ddd;
+	background: #f6f6f6;
+	z-index: 100;
+	font-weight: bold;
+
+	a {
+		display: inline-block;
+		padding: 0 10px;
+		height: 40px;
+		line-height: 40px;
+	}
+}
+
+.js .column {
+	background: #fff;
+	padding: 0;
+	margin: -58px 0 0 10px;
+	z-index: 10;
+
+	a {
+		display: inline-block;
+		padding: 0;
+		width: 30px;
+		height: 30px;
+		border: 1px solid #E49254;
+		border-radius: 2px;
+		overflow: hidden;
+		vertical-align: middle;
+
+		&:first-child {
+			display: none;
+		}
+
+		&:before {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			font-family: entypo;
+			font-size: 24pt;
+			text-align: center;
+			vertical-align: -3px;
+		}
+
+		&:hover:before {
+			background: #fbede2;
+		}
+	}
+
+	a[href='#fieldset-search']:before {
+		content: "🔍";
+	}
+}

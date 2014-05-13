@@ -1,0 +1,31 @@
+html {
+	/* Display vertical scrollbar to prevent jumping of whole page. */
+	overflow-y: scroll;
+	/* Turn off scaling in landscape mode on iPhone. */
+	-webkit-text-size-adjust: none;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Verdana, Arial;
+	color: #444;
+}
+
+a, a:visited {
+	padding: 4px 0; /* touch friendly */
+	color: @linkColor;
+	transition: color 0.1s ease 0s;
+	transition: background-color 0.1s ease 0s;
+}
+
+a:link:hover, a:visited:hover {
+	color: @linkColorHover;
+	text-decoration: none;
+}
+
+#logins a, #tables a, #tables span {
+	background: inherit;
+}
+
+.active:before {
+	font-weight: normal;
+}

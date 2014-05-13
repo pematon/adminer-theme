@@ -1,0 +1,81 @@
+// ------------------------------------------------------------------------
+//	Jush (internal)
+// ------------------------------------------------------------------------
+
+a.jush-custom:hover, a.jush-help:hover {
+	color: inherit;
+	text-decoration: underline;
+}
+
+// ------------------------------------------------------------------------
+//	JSON plugin (by Pematon)
+// ------------------------------------------------------------------------
+
+.json {
+	border-color: #cde;
+	border-left: 7px solid #cde;
+	background: #e8f0fa;
+	margin: 5px 0 3px 0;
+
+	tr {
+		border-bottom: 1px solid #cde;
+	}
+
+	tr:last-child {
+		border-bottom: none;
+	}
+
+	th {
+		border-right: 1px solid #cde;
+		vertical-align: top;
+	}
+
+	code {
+		padding: 4px 10px;
+	}
+}
+
+.json + textarea {
+	margin-top: 6px;
+}
+
+a.json-icon {
+	background: transparent;
+	text-indent: 0;
+
+	&:hover {
+		background: transparent;
+	}
+
+	&:before {
+		display: inline-block;
+		width: 20px;
+		height: 18px;
+		line-height: 18px;
+		font-family: entypo;
+		font-size: 24pt;
+		vertical-align: -3px;
+		content: "▸";
+	}
+}
+
+a.json-icon.json-up {
+	background: transparent;
+	text-indent: 0;
+
+	&:before {
+		content: "▾";
+	}
+}
+
+a.json-link {
+	padding-left: 0;
+
+	&:before  {
+		width: 10px;
+	}
+
+	span {
+		color: inherit;
+	}
+}

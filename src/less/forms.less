@@ -1,0 +1,217 @@
+
+label {
+	padding: 3px 10px;
+}
+
+/* Don't group placeholder color. */
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+input::-moz-placeholder {
+	color: #999;
+}
+
+input:-ms-input-placeholder {
+	color: #999;
+}
+
+input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"],
+textarea, pre[contenteditable="true"], select {
+	padding: 4px 5px !important;
+	border: 1px solid #ccc !important;
+	border-radius: 2px;
+	font-size: 10pt;
+	color: #444;
+	box-shadow: inset 0 2px 2px #eee;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* iOS hack */
+input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"], textarea {
+	-webkit-appearance: none;
+}
+
+input[type="submit"] {
+	display: inline-block;
+	padding: 7px 15px;
+	border: 1px solid @linkColor;
+	border-radius: 2px;
+	background: @linkColor;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-size: 10pt;
+
+	transition: background-color 0.1s ease 0s;
+
+	/* iOS hack */
+	-webkit-appearance: none;
+}
+
+input[type="submit"]:hover {
+	background: @linkColorHover;
+}
+
+input[type="submit"][disabled=""]:hover {
+	background: #fff;
+}
+
+input[type="submit"].default {
+	box-shadow: none;
+}
+
+input[type="checkbox"] {
+	margin: 0 3px;
+}
+
+fieldset {
+	margin: 5px 5px 10px 0;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	background: #f6f6f6;
+	min-height: 55px;
+
+	input[type="submit"] {
+		padding: 3px 10px;
+		border-color: #e49254;
+		background: #fff;
+		color: @linkColor;
+
+		&:hover {
+			background: #BD5200;
+			background: #fbede2;
+			color: @linkColor;
+		}
+	}
+
+	input[type="submit"].default {
+		border-color: @linkColor;
+		background: @linkColor;
+		color: #fff;
+
+		&:hover {
+			background: #BD5200;
+		}
+	}
+}
+
+fieldset + table, table + fieldset {
+	margin-top: 10px;
+}
+
+fieldset legend a {
+	position: relative;
+	padding-bottom: 50px;
+}
+
+fieldset > div > div, fieldset > div > p {
+	position: relative;
+}
+
+legend {
+	margin-bottom: 3px;
+
+	&:before, &:after {
+		content: " ";
+	}
+}
+
+p input, p select, p label, fieldset input, fieldset select {
+	margin: 0 5px 5px 0;
+}
+
+.js {
+	fieldset > .hidden {
+		display: block;
+		margin-top: 5px;
+		text-align: center;
+	}
+
+	fieldset > .hidden * {
+		display: none !important;
+	}
+
+	fieldset > .hidden:before {
+		content: "⏶";
+		font-family: "entypo";
+		font-size: 40pt;
+		line-height: 0;
+		vertical-align: middle;
+		color: #e0e0e0;
+	}
+}
+
+#fieldset-select.hidden:before {
+	content: "⚏";
+}
+
+#fieldset-search.hidden:before {
+	content: "🔍";
+}
+
+#fieldset-sort.hidden:before {
+	content: "⏷";
+}
+
+#fieldset-export.hidden:before {
+	content: "📤";
+}
+
+#fieldset-import.hidden:before {
+	content: "📥";
+}
+
+#fieldset-history.hidden:before {
+	content: "";
+}
+
+#fieldset-history br {
+	display: block;
+	margin-bottom: 20px;
+}
+
+#fieldset-history.hidden br {
+	display: none;
+}
+
+#fieldset-partition.hidden:before {
+	content: "";
+}
+
+.size {
+	width: 8ex;
+}
+
+.sqlarea {
+	max-width: 100%;
+	width: auto !important;
+	height: 350px !important;
+}
+
+@media only screen and (max-width: 768px) {
+	input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"],
+	textarea, pre[contenteditable="true"], select {
+		font-size: 12pt; /* Prevents zoom on iOS */
+		vertical-align: -1px;
+	}
+
+	fieldset input[type="submit"] {
+		padding: 6px 15px;
+	}
+
+	.sqlarea {
+		height: 250px !important;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"],
+	textarea, pre[contenteditable="true"], select {
+		width: 100%;
+	}
+}

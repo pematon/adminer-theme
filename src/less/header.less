@@ -1,0 +1,97 @@
+h1 {
+	padding: 4px;
+}
+
+#h1 {
+	display: block;
+	margin-bottom: 1px;
+	padding: 0;
+	background: url("images/logo.png") 31px bottom no-repeat;
+	text-indent: -100px;
+	width: 100%;
+	height: 40px;
+}
+
+.version {
+	margin-left: 63px;
+	font-size: 8pt;
+	font-style: italic;
+}
+
+#version {
+	color: @linkColor;
+	font-size: 8pt;
+	font-style: italic;
+}
+
+#version:hover {
+	color: #B04D00;
+}
+
+#lang {
+	position: fixed;
+	right: 0;
+	top: 0;
+	left: auto;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	padding: 0;
+	width: 200px;
+	height: 40px;
+	line-height: 30px;
+	font-size: 0;
+	z-index: 101;
+
+	select {
+		height: 28px;
+		padding: 2px 3px;
+		margin: 6px 0;
+		width: 100px;
+	}
+}
+
+.logout {
+	position: fixed;
+	right: 10px;
+	margin: 0px;
+	width: 80px;
+	z-index: 101;
+	overflow: hidden;
+
+	input[type="submit"] {
+		border: none;
+		margin: 0px;
+		padding: 0 10px;
+		height: 40px;
+		background: transparent;
+		color: @linkColor;
+
+		&:hover {
+			background: transparent;
+			color: #B04D00;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#lang {
+		position: static;
+		left: 0;
+		top: 0;
+		width: auto;
+		height: 40px;
+		border-top: 1px solid #ddd;
+		background: #f6f6f6;
+		text-align: right;
+
+		select {
+			margin: 6px 100px 0 0;
+		}
+	}
+
+	.logout {
+		position: relative;
+		float: right;
+		margin-top: -40px;
+	}
+}

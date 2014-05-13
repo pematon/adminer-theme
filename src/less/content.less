@@ -1,0 +1,130 @@
+
+#content {
+	position: relative;
+	margin: 0 0 0 (@menuWidth + 1);
+	padding: 0 20px 40px 20px; // Bottom padding creates space for table paginator.
+	border-top: 41px solid #f6f6f6;
+
+	// Table comment.
+	.links + p {
+		color: #999;
+	}
+}
+
+#breadcrumb {
+	position: fixed;
+	left: @menuWidth + 1;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0 0 0 20px;
+	border-right: 215px solid #f6f6f6;
+	border-bottom: 1px solid #ddd;
+	background: #F6F6F6;
+	height: 40px;
+	line-height: 40px;
+	z-index: 100;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	a {
+		display: inline-block;
+		padding: 0;
+		height: 40px;
+		line-height: 40px;
+	}
+}
+
+h2 {
+	margin: 20px 0;
+	font-size: 20pt;
+	color: #444;
+}
+
+h3 {
+	margin: 30px 0 10px 0;
+	font-size: 16pt;
+}
+
+p {
+	margin: 10px 0;
+}
+
+pre code {
+	display: block;
+	padding: 10px;
+	border-left: 7px solid #cde;
+	border-radius: 2px;
+	background: #e8f0fa;
+	overflow: auto;
+}
+
+#fieldset-history code {
+	&:extend(pre code);
+
+	margin: 5px 0;
+}
+
+fieldset code + i {
+	display: none;
+}
+
+.time {
+	margin-left: 10px;
+	float: right;
+	font-size: 8pt;
+	color: #bbb;
+}
+
+.error, .message {
+	margin: 20px 0;
+	padding: 10px;
+	border-left: 7px solid #cec;
+}
+
+.error {
+	color: #900;
+	border-color: #ecc;
+}
+
+.message {
+	pre {
+		margin: 15px 0 5px 0;
+	}
+
+	p {
+		margin: 0 0 5px 0;
+	}
+}
+
+pre + .message, pre + .error {
+	margin-top: 0;
+}
+
+#help {
+	z-index: 200;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	background: #f6f6f6;
+	padding: 5px 7px;
+}
+
+.icon {
+	background-color: @linkColor;
+}
+
+.icon:hover {
+	background-color: #B04D00;
+}
+
+@media only screen and (max-width: 768px) {
+	#content {
+		margin-left: 0;
+	}
+
+	#breadcrumb {
+		left: 0;
+		padding-left: 50px;
+		border-right-width: 0;
+	}
+}

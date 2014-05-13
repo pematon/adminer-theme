@@ -6,9 +6,6 @@
  *
  * @author Peter Knut
  * @copyright 2014 Pematon, s.r.o. (http://www.pematon.com/)
- *
- * @license http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
- * @license http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License, version 2 (one or other)
  */
 class AdminerTheme
 {

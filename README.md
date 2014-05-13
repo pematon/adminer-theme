@@ -1,7 +1,7 @@
 Theme for Adminer
 =================
 
-Responsive touch-friendly theme for Adminer database tool (http://www.adminer.org/).
+Responsive touch-friendly theme for Adminer database tool ([www.adminer.org](http://www.adminer.org/)).
 
 <img src="http://pematon.github.io/screenshots/adminer.png?2" width="728px" />
 
@@ -67,4 +67,7 @@ Theme is compatible with Adminer 4.1.x.
 Only last versions of modern web browsers are supported. There is no backward compatibility with old versions (especially IE).
 
 ## All-in-one
-You can try our custom configuration in all-in-one bundle: https://github.com/pematon/adminer-custom
+You can try our custom configuration in all-in-one bundle: [github.com/pematon/adminer-custom](https://github.com/pematon/adminer-custom)
+
+## References
+Amazing **Entypo** pictograms are created by Daniel Bruce ([www.entypo.com](http://www.entypo.com/)).

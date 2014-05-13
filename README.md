@@ -22,7 +22,7 @@ File structure will be:
 - adminer.php
 ```
 
-3. Create index.php file and [configure plugins](www.adminer.org/plugins/#use).
+3. Create index.php file and [configure plugins](http://www.adminer.org/plugins/#use).
 
 ```php
 <?php

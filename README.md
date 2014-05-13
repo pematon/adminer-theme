@@ -1,21 +1,11 @@
-Theme and plugins for Adminer
-=============================
+Theme for Adminer
+=================
 
-Responsive theme and plugins for Adminer database tool (http://www.adminer.org/).
+Responsive touch-friendly theme for Adminer database tool (http://www.adminer.org/).
 
 <img src="http://pematon.github.io/screenshots/adminer.png?2" width="728px" />
 
-## Plugins
-
-### AdminerMobile
-
-Adds support for mobile devices. This plugin is required if you want to use our theme on mobile devices.
-
-### AdminerJsonPreview
-
-Displays JSON data preview as a table.
-
-<img src="http://pematon.github.io/screenshots/json-table.png" width="400px" />
+This bundle contains CSS, images, font with icons and plugin AdminerTheme that provides support for mobile devices.
 
 ## How to use
 
@@ -49,8 +39,7 @@ File structure will be:
 
 		$plugins = array(
 			// specify enabled plugins here
-			new AdminerMobile(),
-			new AdminerJsonPreview(),
+			new AdminerTheme(),
 		);
 
 		return new AdminerPlugin($plugins);
@@ -65,8 +54,8 @@ Final file structure will be:
 - fonts
 - images
 - plugins
+	- AdminerTheme.php
 	- plugin.php
-	- ...
 - adminer.css
 - adminer.php
 - index.php
@@ -76,3 +65,6 @@ Final file structure will be:
 Theme is compatible with Adminer 4.1.x.
 
 Only last versions of modern web browsers are supported. There is no backward compatibility with old versions (especially IE).
+
+## All-in-one
+You can try our custom configuration in all-in-one bundle: https://github.com/pematon/adminer-custom

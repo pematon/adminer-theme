@@ -58,12 +58,16 @@ table.checkable > thead th a {
 	vertical-align: middle;
 }
 
-table.checkable > tbody > tr:hover {
-	background: #f6f6f6;
-}
-
 table.checkable .checked {
 	background: #FBEDE2;
+}
+
+table.checkable > tbody > tr:hover {
+	background: darken(#fff, 4%);
+}
+
+table.checkable > tbody > tr.checked:hover {
+	background: darken(#FBEDE2, 4%);
 }
 
 .count {
@@ -102,7 +106,7 @@ table.checkable .checked {
 .js .column {
 	background: #fff;
 	padding: 0;
-	margin: -58px 0 0 10px;
+	margin: -28px 0 0 -40px;
 	z-index: 10;
 
 	a {

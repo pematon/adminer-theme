@@ -3,7 +3,7 @@ Theme for Adminer
 
 Responsive touch-friendly theme for Adminer database tool ([www.adminer.org](http://www.adminer.org/)).
 
-<img src="http://pematon.github.io/screenshots/adminer.png?2" width="728px" />
+<img src="http://pematon.github.io/screenshots/adminer.png?3" width="728px" />
 
 This bundle contains CSS, images, font with icons and plugin AdminerTheme that provides support for mobile devices.
 

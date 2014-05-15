@@ -50,19 +50,28 @@ p {
 	margin: 10px 0;
 }
 
-pre code {
+code {
 	display: block;
 	padding: 10px;
+	margin: 5px 0;
 	border-left: 7px solid #cde;
 	border-radius: 2px;
 	background: #e8f0fa;
 	overflow: auto;
 }
 
-#fieldset-history code {
-	&:extend(pre code);
+td code, th code,
+fieldset code:first-child // Match fieldset "From server" in import, but not filedset with SQL history.
+{
+	display: inline;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+}
 
-	margin: 5px 0;
+pre code {
+	margin: 0;
 }
 
 fieldset code + i {

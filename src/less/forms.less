@@ -109,7 +109,8 @@ fieldset legend a {
 	padding-bottom: 50px;
 }
 
-fieldset > div > div, fieldset > div > p {
+// Makes content of fieldset clickable. This is necessary because of big <a> in fieldset's legend.
+fieldset > div > div, fieldset > div > p, fieldset > div > a, fieldset > div > code {
 	position: relative;
 }
 

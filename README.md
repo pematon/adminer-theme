@@ -7,6 +7,8 @@ Responsive touch-friendly theme for Adminer database tool ([www.adminer.org](htt
 
 This bundle contains CSS, images, font with icons and plugin AdminerTheme that provides support for mobile devices.
 
+You can also try our custom Adminer configuration in **all-in-one bundle**: [github.com/pematon/adminer-custom](https://github.com/pematon/adminer-custom)
+
 ## How to use
 
 1. [Download](http://www.adminer.org/#download) and install Adminer tool.
@@ -65,9 +67,6 @@ Final file structure will be:
 Theme is compatible with Adminer 4.1.x.
 
 Only last versions of modern web browsers are supported. There is no backward compatibility with old versions (especially IE).
-
-## All-in-one
-You can try our custom configuration in all-in-one bundle: [github.com/pematon/adminer-custom](https://github.com/pematon/adminer-custom)
 
 ## References
 Amazing **Entypo** pictograms are created by Daniel Bruce ([www.entypo.com](http://www.entypo.com/)).

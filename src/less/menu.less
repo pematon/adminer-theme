@@ -49,14 +49,25 @@
 	}
 }
 
+.menuLink {
+	display: block;
+	padding: 2px 10px;
+	width: auto;
+	height: 20px;
+	line-height: 20px;
+	color: #444;
+	text-overflow: ellipsis;
+
+	&.active {
+		color: @linkColor;
+		font-weight: bold;
+	}
+}
+
 #tables {
 	a[href*="&table="] {
-		display: block;
-		padding: 2px 30px 2px 10px;
-		height: 20px;
-		line-height: 20px;
-		color: #444;
-		white-space: normal;
+		.menuLink();
+		padding-right: 30px;
 	}
 
 	a[href*="&table="]:hover {
@@ -72,18 +83,18 @@
 		color: #999 !important;
 		overflow: hidden;
 		width: 16px;
-	}
 
-	a[href*="&select="]:before {
-		content: "📄  ";
-		font-family: entypo;
-		font-size: 24pt;
-		line-height: 0;
-		vertical-align: -3px;
-	}
+		&:hover {
+			color: #444 !important;
+		}
 
-	a[href*="&select="]:hover {
-		color: #444 !important;
+		&:before {
+			content: "📄  ";
+			font-family: entypo;
+			font-size: 24pt;
+			line-height: 0;
+			vertical-align: -3px;
+		}
 	}
 
 	a[href*="&table="]:nth-child(2), a[href*="&select="]:first-child {
@@ -94,7 +105,7 @@
 		padding-bottom: 7px;
 	}
 
-	a.active, a.active + a {
+	a.active + a {
 		color: @linkColor;
 		font-weight: bold;
 	}
@@ -104,13 +115,44 @@
 	}
 }
 
+// AdminerSimpleMenu plugin
+#tables.simple {
+	a {
+		.menuLink();
+	}
+
+	a[href*="&select="] {
+		.menuLink();
+		float: none;
+		color: #444 !important;
+
+		&.active {
+			color: @linkColor !important;
+		}
+
+		&:hover {
+			background: #eee;
+		}
+
+		&:before {
+			content: "";
+		}
+	}
+
+	li:first-child a {
+		padding-top: 7px;
+	}
+
+	li:last-child a {
+		padding-bottom: 7px;
+	}
+}
+
 #logins {
 	border-top: 1px solid #ddd;
 
 	a {
-		&:extend(#tables a[href*="&table="]);
-
-		padding-right: 10px;
+		.menuLink();
 	}
 
 	a:hover {

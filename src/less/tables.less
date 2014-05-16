@@ -99,7 +99,7 @@ table.checkable > tbody > tr.checked:hover {
 	border: none;
 	border-top: 1px solid #ddd;
 	background: #f6f6f6;
-	z-index: 100;
+	z-index: 102; // Over logout in mobile layout.
 	font-weight: bold;
 
 	a {
@@ -148,5 +148,11 @@ table.checkable > tbody > tr.checked:hover {
 
 	a[href='#fieldset-search']:before {
 		content: "🔍";
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.pages {
+		left: 0;
 	}
 }

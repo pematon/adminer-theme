@@ -1,6 +1,10 @@
 table {
 	border: 1px solid #ddd;
 	margin: 20px 0 10px 0;
+
+	label.block {
+		padding: 0;
+	}
 }
 
 tr {
@@ -43,17 +47,25 @@ tbody th span {
 	padding-top: 4px;
 }
 
-table label.block {
-	padding: 0;
-}
-
 /* Checkable */
-table.checkable > thead a {
-	padding: 7px 0;
+table.checkable {
+	.checked {
+		background: @lightColor;
+	}
+
+	input[type="checkbox"], input[type="radio"] {
+		margin: 2px 5px 2px 0;
+	}
 }
 
-table.checkable .checked {
-	background: @lightColor;
+table.checkable > thead {
+	a {
+		padding: 7px 0;
+	}
+
+	input[type="checkbox"], input[type="radio"] {
+		margin: 2px 5px 2px 0;
+	}
 }
 
 table.checkable > tbody > tr:hover {
@@ -67,7 +79,7 @@ table.checkable > tbody > tr.checked:hover {
 .count {
 	display: table;
 	margin-top: -10px;
-	padding: 5px 10px 7px 10px;
+	padding: 2px 10px 3px 10px;
 	border: 1px solid #ddd;
 	border-top: none;
 	border-radius: 0 0 2px 2px;
@@ -75,6 +87,7 @@ table.checkable > tbody > tr.checked:hover {
 
 	label {
 		margin: 0;
+		padding: 7px;
 	}
 }
 

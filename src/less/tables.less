@@ -27,10 +27,6 @@ thead td, thead th {
 	text-align: left;
 }
 
-tbody th {
-	padding-top: 8px;
-}
-
 tbody th, tbody td {
 	vertical-align: top;
 }
@@ -43,23 +39,21 @@ tbody td[align="right"] label.block {
 	text-align: right;
 }
 
+tbody th span {
+	padding-top: 4px;
+}
+
 table label.block {
 	padding: 0;
 }
 
 /* Checkable */
-table.checkable > thead th {
-	padding: 0;
-}
-
-table.checkable > thead th a {
-	display: inline-block;
-	padding: 7px 10px;
-	vertical-align: middle;
+table.checkable > thead a {
+	padding: 7px 0;
 }
 
 table.checkable .checked {
-	background: #FBEDE2;
+	background: @lightColor;
 }
 
 table.checkable > tbody > tr:hover {
@@ -67,7 +61,7 @@ table.checkable > tbody > tr:hover {
 }
 
 table.checkable > tbody > tr.checked:hover {
-	background: darken(#FBEDE2, 4%);
+	background: darken(@lightColor, 4%);
 }
 
 .count {
@@ -106,7 +100,9 @@ table.checkable > tbody > tr.checked:hover {
 .js .column {
 	background: #fff;
 	padding: 0;
-	margin: -28px 0 0 -40px;
+	margin: -36px 0 0 -62px;
+	border: 1px solid #E49254;
+	border-radius: 2px;
 	z-index: 10;
 
 	a {
@@ -114,14 +110,8 @@ table.checkable > tbody > tr.checked:hover {
 		padding: 0;
 		width: 30px;
 		height: 30px;
-		border: 1px solid #E49254;
-		border-radius: 2px;
 		overflow: hidden;
 		vertical-align: middle;
-
-		&:first-child {
-			display: none;
-		}
 
 		&:before {
 			display: inline-block;
@@ -135,8 +125,12 @@ table.checkable > tbody > tr.checked:hover {
 		}
 
 		&:hover:before {
-			background: #fbede2;
+			background: @lightColor;
 		}
+	}
+
+	a[href*='&select=']:before {
+		content: "⬇";
 	}
 
 	a[href='#fieldset-search']:before {

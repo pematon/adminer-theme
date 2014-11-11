@@ -12,6 +12,8 @@ class AdminerTheme
 
 	function head()
 	{
+		define("PMTN_ADMINER_THEME", true);
+
 		$userAgent = filter_input(INPUT_SERVER, "HTTP_USER_AGENT");
 
 		?>

@@ -7,7 +7,7 @@ Responsive touch-friendly theme for Adminer database tool ([www.adminer.org](htt
 
 This bundle contains CSS, images, font with icons and plugin AdminerTheme that provides support for mobile devices.
 
-You can also try our usefull [**plugins**](https://github.com/pematon/adminer-plugins) or our custom Adminer configuration in [**all-in-one bundle**](https://github.com/pematon/adminer-custom)
+You can also try our usefull [**plugins**](https://github.com/pematon/adminer-plugins) or our custom Adminer configuration in [**all-in-one bundle**](https://github.com/pematon/adminer-custom).
 
 ## How to use
 

@@ -1,47 +1,17 @@
-h1 {
-	padding: 4px;
-}
-
-#h1 {
-	display: block;
-	margin-bottom: 1px;
-	padding: 0;
-	background: url("images/logo.png") 31px bottom no-repeat;
-	text-indent: -100px;
-	width: 100%;
-	height: 40px;
-}
-
-.version {
-	margin-left: 63px;
-	font-size: 8pt;
-	font-style: italic;
-}
-
-#version {
-	color: @linkColor;
-	font-size: 8pt;
-	font-style: italic;
-}
-
-#version:hover {
-	color: #B04D00;
-}
-
 #lang {
 	position: fixed;
 	right: 0;
 	top: 0;
 	left: auto;
 	border: none;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid @blockBorderColor;
 	padding: 0 0 0 10px;
 	width: 190px;
 	height: 40px;
 	line-height: 30px;
 	font-size: 0;
 	z-index: 101;
-	background: #f6f6f6;
+	background: @blockBgColor;
 
 	select {
 		height: 28px;
@@ -69,7 +39,7 @@ h1 {
 
 		&:hover {
 			background: transparent;
-			color: #B04D00;
+			color: @linkColorHover;
 		}
 	}
 }
@@ -81,8 +51,8 @@ h1 {
 		top: 0;
 		width: auto;
 		height: 40px;
-		border-top: 1px solid #ddd;
-		background: #f6f6f6;
+		border-top: 1px solid @blockBorderColor;
+		background: @blockBgColor;
 		text-align: right;
 
 		select {

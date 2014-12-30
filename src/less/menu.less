@@ -1,3 +1,37 @@
+h1 {
+	height: 40px;
+}
+
+#h1 {
+	display: inline-block;
+	padding: 0;
+	background: url("images/logo.png?2") 10px center no-repeat;
+	background-size: 120px;
+	text-indent: -100px;
+	width: 135px;
+	height: 40px;
+}
+
+.version {
+	position: relative;
+	top: -7px;
+	vertical-align: bottom;
+	font-size: 8pt;
+	font-style: italic;
+	color: @note2Color;
+}
+
+#version {
+	&:extend(.version);
+
+	padding: 5px;
+	color: @linkColor;
+}
+
+#version:hover {
+	color: @linkColorHover;
+}
+
 #menu {
 	position: fixed;
 	left: 0;
@@ -6,18 +40,19 @@
 	width: @menuWidth;
 	margin: 0;
 	padding: 0;
-	border-right: 1px solid #ddd;
+	border-right: 1px solid @blockBorderColor;
 	overflow-y: auto;
 	overflow-x: hidden;
-	background: #fff;
+	-webkit-overflow-scrolling: touch;
+	background: @bgColor;
 	z-index: 100;
 
 	#dbs {
-		border-top: 1px solid #ddd;
+		border-top: 1px solid @blockBorderColor;
 		border-bottom: none;
 		padding: 10px;
-		background: #F6F6F6;
-		color: #F6F6F6;
+		background: @blockBgColor;
+		color: @blockBgColor;
 		font-size: 0;
 	}
 
@@ -31,21 +66,21 @@
 	}
 
 	.links {
-		background: #F6F6F6;
-		border-bottom: 1px solid #ddd;
+		background: @blockBgColor;
+		border-bottom: 1px solid @blockBorderColor;
 		padding: 0 10px 7px 10px;
 	}
 
 	#tables, #logins {
-		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid @blockBorderColor;
 		padding: 0;
 	}
 
 	.message {
 		background: transparent;
 		border: none;
-		border-bottom: 1px solid #ddd;
-		color: #bbb;
+		border-bottom: 1px solid @blockBorderColor;
+		color: @note2Color;
 	}
 }
 
@@ -55,7 +90,7 @@
 	width: auto;
 	height: 20px;
 	line-height: 20px;
-	color: #444;
+	color: @textColor;
 	text-overflow: ellipsis;
 
 	&.active {
@@ -71,7 +106,7 @@
 	}
 
 	a[href*="&table="]:hover {
-		background: #eee;
+		background: @menuHoverColor;
 	}
 
 	a[href*="&select="] {
@@ -80,12 +115,12 @@
 		padding: 2px 7px;
 		height: 20px;
 		line-height: 20px;
-		color: #999 !important;
+		color: @noteColor !important;
 		overflow: hidden;
 		width: 16px;
 
 		&:hover {
-			color: #444 !important;
+			color: @textColor !important;
 		}
 
 		&:before {
@@ -124,19 +159,19 @@
 	a[href*="&select="] {
 		.menuLink();
 		float: none;
-		color: #444 !important;
+		color: @textColor !important;
 
 		&.active {
 			color: @linkColor !important;
 		}
 
-		&:hover {
-			background: #eee;
-		}
-
 		&:before {
 			content: "";
 		}
+	}
+
+	li:hover {
+		background: @menuHoverColor;
 	}
 
 	li:first-child a {
@@ -149,14 +184,14 @@
 }
 
 #logins {
-	border-top: 1px solid #ddd;
+	border-top: 1px solid @blockBorderColor;
 
 	a {
 		.menuLink();
 	}
 
 	a:hover {
-		background: #eee;
+		background: @menuHoverColor;
 	}
 
 	a:first-of-type {
@@ -179,7 +214,7 @@
 		bottom: auto;
 		border: none;
 		overflow: hidden;
-		background: #f6f6f6;
+		background: @blockBgColor;
 
 		#h1 {
 			margin-top: 10px;
@@ -197,11 +232,11 @@
 			font-family: "entypo";
 			font-size: 32pt;
 			line-height: 30px;
-			border: 1px solid #e69150;
+			border: 1px solid @lightBorderColor;
 			border-radius: 2px;
 			text-align: center;
 			vertical-align: middle;
-			background: #fff;
+			background: @bgColor;
 			cursor: pointer;
 		}
 
@@ -211,9 +246,9 @@
 			width: @menuWidth;
 			max-width: 100%;
 			max-height: 100%;
-			border-right: 1px solid #ddd;
-			border-bottom: 5px solid #ddd;
-			background: #fff;
+			border-right: 1px solid @blockBorderColor;
+			border-bottom: 5px solid @blockBorderColor;
+			background: @bgColor;
 			box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.03);
 			z-index: 200;
 			overflow-y: auto;
@@ -248,7 +283,7 @@
 	only screen and (min-device-pixel-ratio: 1.5)
 {
 	#h1 {
-		background: url("images/logo-hres.png") center bottom no-repeat;
-		background-size: 180px;
+		background-image: url("images/logo-hres.png?2");
+		background-size: 120px;
 	}
 }

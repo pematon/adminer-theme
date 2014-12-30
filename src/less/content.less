@@ -3,11 +3,11 @@
 	position: relative;
 	margin: 0 0 0 (@menuWidth + 1);
 	padding: 0 20px 40px 20px; // Bottom padding creates space for table paginator.
-	border-top: 41px solid #f6f6f6;
+	border-top: 41px solid @blockBgColor;
 
 	// Table comment.
 	.links + p {
-		color: #999;
+		color: @noteColor;
 	}
 }
 
@@ -18,9 +18,9 @@
 	right: 0;
 	margin: 0;
 	padding: 0 0 0 20px;
-	border-right: 205px solid #f6f6f6;
-	border-bottom: 1px solid #ddd;
-	background: #F6F6F6;
+	border-right: 205px solid @blockBgColor;
+	border-bottom: 1px solid @blockBorderColor;
+	background: @blockBgColor;
 	height: 40px;
 	line-height: 40px;
 	z-index: 100;
@@ -38,7 +38,7 @@
 h2 {
 	margin: 20px 0;
 	font-size: 20pt;
-	color: #444;
+	color: @textColor;
 }
 
 h3 {
@@ -54,9 +54,9 @@ code {
 	display: block;
 	padding: 10px;
 	margin: 5px 0;
-	border-left: 7px solid #cde;
+	border-left: 7px solid @codeBorderColor;
 	border-radius: 2px;
-	background: #e8f0fa;
+	background: @codeBgColor;
 	overflow: auto;
 }
 
@@ -82,7 +82,7 @@ fieldset code + i {
 	margin-left: 10px;
 	float: right;
 	font-size: 8pt;
-	color: #bbb;
+	color: @note2Color;
 }
 
 .error, .message {
@@ -112,9 +112,9 @@ pre + .message, pre + .error {
 
 #help {
 	z-index: 200;
-	border: 1px solid #ddd;
+	border: 1px solid @blockBorderColor;
 	border-radius: 2px;
-	background: #f6f6f6;
+	background: @blockBgColor;
 	padding: 5px 7px;
 }
 
@@ -123,7 +123,7 @@ pre + .message, pre + .error {
 }
 
 .icon:hover {
-	background-color: #B04D00;
+	background-color: @linkColorHover;
 }
 
 @media only screen and (max-width: 768px) {

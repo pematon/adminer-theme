@@ -5,25 +5,26 @@ label {
 
 /* Don't group placeholder color. */
 input::-webkit-input-placeholder {
-	color: #999;
+	color: @inputPlaceholderColor;
 }
 
 input::-moz-placeholder {
-	color: #999;
+	color: @inputPlaceholderColor;
 }
 
 input:-ms-input-placeholder {
-	color: #999;
+	color: @inputPlaceholderColor;
 }
 
 input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"],
 textarea, pre[contenteditable="true"], select {
 	padding: 4px 5px !important;
-	border: 1px solid #ccc !important;
+	border: 1px solid @inputBorderColor !important;
 	border-radius: 2px;
 	font-size: 10pt;
-	color: #444;
-	box-shadow: inset 0 2px 2px #eee;
+	background: @inputBgColor;
+	color: @inputTextColor;
+	box-shadow: inset 0 2px 2px mix(@inputBorderColor, @inputBgColor, 40%);
 
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -46,7 +47,7 @@ input[type="submit"] {
 	border: 1px solid @linkColor;
 	border-radius: 2px;
 	background: @linkColor;
-	color: #fff;
+	color: @bgColor;
 	text-align: center;
 	text-decoration: none;
 	font-size: 10pt;
@@ -59,10 +60,11 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
 	background: @linkColorHover;
+	border-color: @linkColorHover;
 }
 
 input[type="submit"][disabled=""]:hover {
-	background: #fff;
+	background: mix(@linkColor, @bgColor, 50%);
 }
 
 input[type="submit"].default {
@@ -70,8 +72,8 @@ input[type="submit"].default {
 }
 
 input[type="image"] {
-	border: 4px solid #fff;
-	outline: 1px solid mix(@linkColor, #fff, 30%);
+	border: 4px solid @bgColor;
+	outline: 1px solid mix(@linkColor, @bgColor, 30%);
 	-moz-outline-radius: 2px;
 	margin-right: 5px;
 
@@ -80,7 +82,7 @@ input[type="image"] {
 	}
 
 	&:hover {
-		border-color: @lightColor;
+		border-color: @lightBgColor;
 	}
 }
 
@@ -91,19 +93,19 @@ input[type="checkbox"], input[type="radio"] {
 fieldset {
 	margin: 5px 5px 10px 0;
 	padding: 5px 10px;
-	border: 1px solid #ddd;
+	border: 1px solid @blockBorderColor;
 	border-radius: 2px;
-	background: #f6f6f6;
+	background: @blockBgColor;
 	min-height: 55px;
 
 	input[type="submit"] {
 		padding: 3px 10px;
-		border-color: #e49254;
-		background: #fff;
+		border-color: @lightBorderColor;
+		background: @inputBgColor;
 		color: @linkColor;
 
 		&:hover {
-			background: @lightColor;
+			background: @lightBgColor;
 			color: @linkColor;
 		}
 	}
@@ -111,10 +113,11 @@ fieldset {
 	input[type="submit"].default {
 		border-color: @linkColor;
 		background: @linkColor;
-		color: #fff;
+		color: @bgColor;
 
 		&:hover {
-			background: #BD5200;
+			background: @linkColorHover;
+			border-color: @linkColorHover;
 		}
 	}
 }
@@ -162,7 +165,7 @@ p input, p select, p label, fieldset input, fieldset select {
 		font-size: 40pt;
 		line-height: 0;
 		vertical-align: middle;
-		color: #e0e0e0;
+		color: mix(@blockBorderColor, @blockBgColor, 80%);
 	}
 }
 

@@ -1,5 +1,5 @@
 table {
-	border: 1px solid #ddd;
+	border: 1px solid @blockBorderColor;
 	margin: 20px 0 10px 0;
 
 	label.block {
@@ -8,7 +8,7 @@ table {
 }
 
 tr {
-	border-bottom: 1px dotted #ddd;
+	border-bottom: 1px dotted @blockBorderColor;
 }
 
 th, td {
@@ -21,8 +21,8 @@ thead td, thead th, .odd td, tbody tr:hover td,tbody tr:hover th,
 }
 
 thead tr {
-	background: #f6f6f6;
-	border-bottom: 1px solid #ddd;
+	background: @blockBgColor;
+	border-bottom: 1px solid @blockBorderColor;
 }
 
 thead td, thead th {
@@ -50,7 +50,7 @@ tbody th span {
 /* Checkable */
 table.checkable {
 	.checked {
-		background: @lightColor;
+		background: @lightBgColor;
 	}
 
 	input[type="checkbox"], input[type="radio"] {
@@ -73,17 +73,17 @@ table.checkable > tbody > tr:hover {
 }
 
 table.checkable > tbody > tr.checked:hover {
-	background: darken(@lightColor, 4%);
+	background: darken(@lightBgColor, 4%);
 }
 
 .count {
 	display: table;
 	margin-top: -10px;
 	padding: 2px 10px 3px 10px;
-	border: 1px solid #ddd;
+	border: 1px solid @blockBorderColor;
 	border-top: none;
 	border-radius: 0 0 2px 2px;
-	background: #f6f6f6;
+	background: @blockBgColor;
 
 	label {
 		margin: 0;
@@ -97,8 +97,8 @@ table.checkable > tbody > tr.checked:hover {
 	margin: 0;
 	padding: 0 10px;
 	border: none;
-	border-top: 1px solid #ddd;
-	background: #f6f6f6;
+	border-top: 1px solid @blockBorderColor;
+	background: @blockBgColor;
 	z-index: 102; // Over logout in mobile layout.
 	font-weight: bold;
 
@@ -111,7 +111,7 @@ table.checkable > tbody > tr.checked:hover {
 }
 
 .js .column {
-	background: #fff;
+	background: @bgColor;
 	padding: 0;
 	margin: -36px 0 0 -62px;
 	border: 1px solid #E49254;
@@ -138,7 +138,7 @@ table.checkable > tbody > tr.checked:hover {
 		}
 
 		&:hover:before {
-			background: @lightColor;
+			background: lightBgColor;
 		}
 	}
 

@@ -43,6 +43,7 @@ File structure will be:
 
 		// Specify enabled plugins here.
 		$plugins = array(
+			// AdminerTheme has to be the last one!
 			new AdminerTheme(),
 			
 			// Color variant can by specified in constructor parameter.

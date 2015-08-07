@@ -3,11 +3,13 @@ Theme for Adminer
 
 Responsive touch-friendly theme for Adminer database tool ([www.adminer.org](http://www.adminer.org/)).
 
-<img src="http://pematon.github.io/screenshots/adminer.png?3" width="728px" />
+<img src="http://pematon.github.io/screenshots/adminer.png?4" width="728px" />
 
-This bundle contains CSS, images, font with icons and plugin AdminerTheme that provides support for mobile devices.
+Three color variants included.
 
-You can also try our usefull [**plugins**](https://github.com/pematon/adminer-plugins) or our custom Adminer configuration in [**all-in-one bundle**](https://github.com/pematon/adminer-custom).
+<img src="http://pematon.github.io/screenshots/adminer-vriants.png" width="620px" />
+
+You can also try our useful [**plugins**](https://github.com/pematon/adminer-plugins) or our custom Adminer configuration in [**all-in-one bundle**](https://github.com/pematon/adminer-custom).
 
 ## How to use
 
@@ -17,10 +19,10 @@ You can also try our usefull [**plugins**](https://github.com/pematon/adminer-pl
 
 File structure will be:
 ```
+- css
 - fonts
 - images
 - plugins
-- adminer.css
 - adminer.php
 ```
 
@@ -31,40 +33,45 @@ File structure will be:
 
 	function adminer_object()
 	{
-		// required to run any plugin
+		// Required to run any plugin.
 		include_once "./plugins/plugin.php";
 
-		// autoloader
+		// Plugins auto-loader.
 		foreach (glob("plugins/*.php") as $filename) {
 			include_once "./$filename";
 		}
 
+		// Specify enabled plugins here.
 		$plugins = array(
-			// specify enabled plugins here
 			new AdminerTheme(),
+			
+			// Color variant can by specified in constructor parameter.
+			// new AdminerTheme("default-orange"),
+			// new AdminerTheme("default-blue"),
+			// new AdminerTheme("default-green"),
 		);
 
 		return new AdminerPlugin($plugins);
 	}
 
-	// include original Adminer or Adminer Editor
+	// Include original Adminer or Adminer Editor.
 	include "./adminer.php";
 ```
 
 Final file structure will be:
 ```
+- css
 - fonts
 - images
 - plugins
 	- AdminerTheme.php
 	- plugin.php
-- adminer.css
 - adminer.php
 - index.php
 ```
 
 ## Compatibility
-Theme is compatible with Adminer 4.1.x.
+Theme is compatible with Adminer 4.1 and newer.
 
 Only last versions of modern web browsers are supported. There is no backward compatibility with old versions (especially IE).
 

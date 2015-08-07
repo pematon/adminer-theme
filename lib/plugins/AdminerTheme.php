@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Adds support for mobile devices.
- * This includes meta headers, touch icons and other stuff related to Pematon's custom theme.
+ * Adds support for Pematon's custom theme.
+ * This includes meta headers, touch icons and other stuff.
  *
  * @author Peter Knut
  * @copyright 2014-2015 Pematon, s.r.o. (http://www.pematon.com/)
@@ -10,13 +10,15 @@
 class AdminerTheme
 {
 	/** @var string */
-	protected $themeName;
+	private $themeName;
 
 	/**
 	 * @param string $themeName File with this name and .css extension should be located in css folder.
 	 */
 	function AdminerTheme($themeName = "default-orange")
 	{
+		define("PMTN_ADMINER_THEME", true);
+
 		$this->themeName = $themeName;
 	}
 
@@ -26,8 +28,6 @@ class AdminerTheme
 	 */
 	public function head()
 	{
-		define("PMTN_ADMINER_THEME", true);
-
 		$userAgent = filter_input(INPUT_SERVER, "HTTP_USER_AGENT");
 		?>
 
@@ -58,26 +58,37 @@ class AdminerTheme
 		<link rel="stylesheet" type="text/css" href="css/<?= htmlspecialchars($this->themeName) ?>.css">
 
 		<script>
+			(function(window) {
+				"use strict";
 
-			window.addEventListener("load", function() {
-				var menu = document.getElementById("menu");
-				var button = menu.getElementsByTagName("h1")[0];
-				if (!menu || !button)
-					return;
-
-				button.addEventListener("click", function() {
-					if (menu.className.indexOf(" open") >= 0)
-						menu.className = menu.className.replace(/ *open/, "");
-					else
-						menu.className += " open";
+				window.addEventListener("load", function() {
+					prepareMenuButton();
 				}, false);
-			}, false);
+
+				function prepareMenuButton() {
+					var menu = document.getElementById("menu");
+					var button = menu.getElementsByTagName("h1")[0];
+					if (!menu || !button) {
+						return;
+					}
+
+					button.addEventListener("click", function() {
+						if (menu.className.indexOf(" open") >= 0) {
+							menu.className = menu.className.replace(/ *open/, "");
+						} else {
+							menu.className += " open";
+						}
+					}, false);
+				}
+
+			})(window);
 
 		</script>
 
 		<?php
 
 		// Return false to disable linking of adminer.css and original favicon.
+		// Warning! This will stop executing head() function in all plugins defined after AdminerTheme.
 		return false;
 	}
 }

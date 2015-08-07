@@ -1,3 +1,5 @@
+@import "variables.less";
+
 #lang {
 	position: fixed;
 	right: 0;
@@ -14,7 +16,6 @@
 	background: @blockBgColor;
 
 	select {
-		height: 28px;
 		padding: 2px 3px;
 		margin: 6px 0;
 		width: 100px;
@@ -24,14 +25,14 @@
 .logout {
 	position: fixed;
 	right: 10px;
-	margin: 0px;
+	margin: 0;
 
 	z-index: 101;
 	overflow: hidden;
 
 	input[type="submit"] {
 		border: none;
-		margin: 0px;
+		margin: 0;
 		padding: 0 10px;
 		height: 40px;
 		background: transparent;
@@ -50,13 +51,11 @@
 		left: 0;
 		top: 0;
 		width: auto;
-		height: 40px;
 		border-top: 1px solid @blockBorderColor;
 		background: @blockBgColor;
-		text-align: right;
 
 		select {
-			margin: 6px 90px 0 0;
+			margin: 4px 10px 0 10px;
 		}
 	}
 
@@ -64,5 +63,11 @@
 		position: relative;
 		float: right;
 		margin-top: -40px;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	#lang select {
+		margin-left: 0;
 	}
 }

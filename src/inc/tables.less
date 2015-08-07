@@ -1,3 +1,5 @@
+@import "variables.less";
+
 table {
 	border: 1px solid @blockBorderColor;
 	margin: 20px 0 10px 0;
@@ -131,14 +133,14 @@ table.checkable > tbody > tr.checked:hover {
 			width: 30px;
 			height: 30px;
 			line-height: 30px;
-			font-family: entypo;
+			font-family: entypo, sans-serif;
 			font-size: 24pt;
 			text-align: center;
 			vertical-align: -3px;
 		}
 
 		&:hover:before {
-			background: lightBgColor;
+			background: @lightBgColor;
 		}
 	}
 

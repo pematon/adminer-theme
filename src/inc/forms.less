@@ -1,3 +1,4 @@
+@import "variables.less";
 
 label {
 	padding: 3px 10px;
@@ -64,7 +65,7 @@ input[type="submit"]:hover {
 }
 
 input[type="submit"][disabled=""]:hover {
-	background: mix(@linkColor, @bgColor, 50%);
+	background: @bgColor;
 }
 
 input[type="submit"].default {
@@ -161,7 +162,7 @@ p input, p select, p label, fieldset input, fieldset select {
 
 	fieldset > .hidden:before {
 		content: "⏶";
-		font-family: "entypo";
+		font-family: "entypo", sans-serif;
 		font-size: 40pt;
 		line-height: 0;
 		vertical-align: middle;
@@ -221,6 +222,10 @@ p input, p select, p label, fieldset input, fieldset select {
 	textarea, pre[contenteditable="true"], select {
 		font-size: 12pt; /* Prevents zoom on iOS */
 		vertical-align: -1px;
+	}
+
+	input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"], select {
+		height: 32px;
 	}
 
 	fieldset input[type="submit"] {

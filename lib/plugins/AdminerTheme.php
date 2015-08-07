@@ -5,38 +5,60 @@
  * This includes meta headers, touch icons and other stuff related to Pematon's custom theme.
  *
  * @author Peter Knut
- * @copyright 2014 Pematon, s.r.o. (http://www.pematon.com/)
+ * @copyright 2014-2015 Pematon, s.r.o. (http://www.pematon.com/)
  */
 class AdminerTheme
 {
+	/** @var string */
+	protected $themeName;
 
-	function head()
+	/**
+	 * @param string $themeName File with this name and .css extension should be located in css folder.
+	 */
+	function AdminerTheme($themeName = "default-orange")
+	{
+		$this->themeName = $themeName;
+	}
+
+	/**
+	 * Prints HTML code inside <head>.
+	 * @return false
+	 */
+	public function head()
 	{
 		define("PMTN_ADMINER_THEME", true);
 
 		$userAgent = filter_input(INPUT_SERVER, "HTTP_USER_AGENT");
-
 		?>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, target-densitydpi=medium-dpi"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, target-densitydpi=medium-dpi"/>
 
-		<?php if (strpos($userAgent, "iPhone") !== false || strpos($userAgent, "iPad") !== false): ?>
-			<link rel="apple-touch-icon-precomposed" href="images/touchIcon.png"/>
+		<link rel="icon" type="image/ico" href="images/favicon.png">
 
-		<?php elseif (strpos($userAgent, "Android") !== false): ?>
-			<link rel="apple-touch-icon-precomposed" href="images/touchIcon-android.png"/>
-
-		<?php elseif (strpos($userAgent, "Windows") !== false): ?>
+		<?php
+			// Condition for Windows Phone has to be the first, because IE11 contains also iPhone and Android keywords.
+			if (strpos($userAgent, "Windows") !== false):
+		?>
 			<meta name="application-name" content="Adminer"/>
 			<meta name="msapplication-TileColor" content="#ffffff"/>
 			<meta name="msapplication-square150x150logo" content="images/tileIcon.png"/>
 			<meta name="msapplication-wide310x150logo" content="images/tileIcon-wide.png"/>
 
-		<?php elseif (strpos($userAgent, "BlackBerry") !== false || strpos($userAgent, "PlayBook") !== false): ?>
+		<?php elseif (strpos($userAgent, "iPhone") !== false || strpos($userAgent, "iPad") !== false): ?>
+			<link rel="apple-touch-icon-precomposed" href="images/touchIcon.png"/>
+
+		<?php elseif (strpos($userAgent, "Android") !== false): ?>
+			<link rel="apple-touch-icon-precomposed" href="images/touchIcon-android.png?2"/>
+
+		<?php else: ?>
 			<link rel="apple-touch-icon" href="images/touchIcon.png"/>
 		<?php endif; ?>
 
+		<link rel="stylesheet" type="text/css" href="css/<?= htmlspecialchars($this->themeName) ?>.css">
+
 		<script>
+
 			window.addEventListener("load", function() {
 				var menu = document.getElementById("menu");
 				var button = menu.getElementsByTagName("h1")[0];
@@ -54,5 +76,8 @@ class AdminerTheme
 		</script>
 
 		<?php
+
+		// Return false to disable linking of adminer.css and original favicon.
+		return false;
 	}
 }

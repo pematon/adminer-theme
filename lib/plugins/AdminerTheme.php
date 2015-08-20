@@ -55,7 +55,7 @@ class AdminerTheme
 			<link rel="apple-touch-icon" href="images/touchIcon.png"/>
 		<?php endif; ?>
 
-		<link rel="stylesheet" type="text/css" href="css/<?= htmlspecialchars($this->themeName) ?>.css">
+		<link rel="stylesheet" type="text/css" href="css/<?= htmlspecialchars($this->themeName) ?>.css?2">
 
 		<script>
 			(function(window) {

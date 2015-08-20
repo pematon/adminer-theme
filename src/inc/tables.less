@@ -81,7 +81,8 @@ table.checkable > tbody > tr.checked:hover {
 .count {
 	display: table;
 	margin-top: -10px;
-	padding: 2px 10px 3px 10px;
+	padding: 0 10px;
+	line-height: 40px;
 	border: 1px solid @blockBorderColor;
 	border-top: none;
 	border-radius: 0 0 2px 2px;
@@ -155,6 +156,12 @@ table.checkable > tbody > tr.checked:hover {
 
 @media only screen and (max-width: 768px) {
 	.pages {
-		left: 0;
+		position: static;
+		margin: -10px 0 10px 0;
+
+		border-top: none;
+		border-left: 1px solid @blockBorderColor;
+		border-right: 1px solid @blockBorderColor;
+		border-bottom: 1px solid @blockBorderColor;
 	}
 }

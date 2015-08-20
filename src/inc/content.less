@@ -3,8 +3,19 @@
 #content {
 	position: relative;
 	margin: 0 0 0 (@menuWidth + 1);
-	padding: 0 20px 40px 20px; // Bottom padding creates space for table paginator.
-	border-top: 41px solid @blockBgColor;
+	padding: 41px 20px 40px 20px; // Bottom padding creates space for table paginator.
+
+	&:before {
+		position: fixed;
+		left: 0;
+		top: 0;
+		content: "";
+		display: block;
+		width: 100%;
+		height: 40px;
+		background: @blockBgColor;
+		border-bottom: 1px solid @blockBorderColor;
+	}
 
 	// Table comment.
 	.links + p {
@@ -20,7 +31,6 @@
 	margin: 0;
 	padding: 0 0 0 20px;
 	border-right: 205px solid @blockBgColor;
-	border-bottom: 1px solid @blockBorderColor;
 	background: @blockBgColor;
 	height: 40px;
 	line-height: 40px;
@@ -141,7 +151,7 @@ pre + .message, pre + .error {
 
 @media only screen and (max-width: 360px) {
 	#content {
-		padding: 0 10px 20px;
+		padding: 41px 10px 20px;
 	}
 
 	h2 {

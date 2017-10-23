@@ -1,135 +1,135 @@
 @import "variables.less";
 
 label {
-	padding: 3px 10px;
+    padding: 3px 10px;
 }
 
 /* Don't group placeholder color. */
 input::-webkit-input-placeholder {
-	color: @inputPlaceholderColor;
+    color: @inputPlaceholderColor;
 }
 
 input::-moz-placeholder {
-	color: @inputPlaceholderColor;
+    color: @inputPlaceholderColor;
 }
 
 input:-ms-input-placeholder {
-	color: @inputPlaceholderColor;
+    color: @inputPlaceholderColor;
 }
 
 input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"],
 textarea, pre[contenteditable="true"], select {
-	padding: 4px 5px !important;
-	border: 1px solid @inputBorderColor !important;
-	border-radius: 2px;
-	font-size: 10pt;
-	background: @inputBgColor;
-	color: @inputTextColor;
-	box-shadow: inset 0 2px 2px mix(@inputBorderColor, @inputBgColor, 40%);
+    padding: 4px 5px !important;
+    border: 1px solid @inputBorderColor !important;
+    border-radius: 2px;
+    font-size: 10pt;
+    background: @inputBgColor;
+    color: @inputTextColor;
+    box-shadow: inset 0 2px 2px mix(@inputBorderColor, @inputBgColor, 40%);
 
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 // iOS hack
 input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"], textarea {
-	-webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
 // Makes height of inputs and select the same.
 input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"], select {
-	height: 28px;
+    height: 28px;
 }
 
 input[type="submit"] {
-	display: inline-block;
-	padding: 7px 15px;
-	border: 1px solid @linkColor;
-	border-radius: 2px;
-	background: @linkColor;
-	color: @bgColor;
-	text-align: center;
-	text-decoration: none;
-	font-size: 10pt;
+    display: inline-block;
+    padding: 7px 15px;
+    border: 1px solid @linkColor;
+    border-radius: 2px;
+    background: @linkColor;
+    color: @bgColor;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10pt;
 
-	transition: background-color 0.1s ease 0s;
+    transition: background-color 0.1s ease 0s;
 
-	/* iOS hack */
-	-webkit-appearance: none;
+    /* iOS hack */
+    -webkit-appearance: none;
 }
 
 input[type="submit"]:hover {
-	background: @linkColorHover;
-	border-color: @linkColorHover;
+    background: @linkColorHover;
+    border-color: @linkColorHover;
 }
 
 input[type="submit"][disabled=""]:hover {
-	background: @bgColor;
+    background: @bgColor;
 }
 
 input[type="submit"].default {
-	box-shadow: none;
+    box-shadow: none;
 }
 
 input[type="image"] {
-	border: 4px solid @bgColor;
-	outline: 1px solid mix(@linkColor, @bgColor, 30%);
-	-moz-outline-radius: 2px;
-	margin-right: 5px;
+    border: 4px solid @bgColor;
+    outline: 1px solid mix(@linkColor, @bgColor, 30%);
+    -moz-outline-radius: 2px;
+    margin-right: 5px;
 
-	&:last-child {
-		margin-right: 0;
-	}
+    &:last-child {
+        margin-right: 0;
+    }
 
-	&:hover {
-		border-color: @lightBgColor;
-	}
+    &:hover {
+        border-color: @lightBgColor;
+    }
 }
 
 input[type="checkbox"], input[type="radio"] {
-	margin: 7px 5px 7px 0;
+    margin: 7px 5px 7px 0;
 }
 
 fieldset {
-	margin: 5px 5px 10px 0;
-	padding: 5px 10px;
-	border: 1px solid @blockBorderColor;
-	border-radius: 2px;
-	background: @blockBgColor;
-	min-height: 55px;
+    margin: 5px 5px 10px 0;
+    padding: 5px 10px;
+    border: 1px solid @blockBorderColor;
+    border-radius: 2px;
+    background: @blockBgColor;
+    min-height: 55px;
 
-	input[type="submit"] {
-		padding: 3px 10px;
-		border-color: @lightBorderColor;
-		background: @inputBgColor;
-		color: @linkColor;
+    input[type="submit"] {
+        padding: 3px 10px;
+        border-color: @lightBorderColor;
+        background: @inputBgColor;
+        color: @linkColor;
 
-		&:hover {
-			background: @lightBgColor;
-			color: @linkColor;
-		}
-	}
+        &:hover {
+            background: @lightBgColor;
+            color: @linkColor;
+        }
+    }
 
-	input[type="submit"].default {
-		border-color: @linkColor;
-		background: @linkColor;
-		color: @bgColor;
+    input[type="submit"].default {
+        border-color: @linkColor;
+        background: @linkColor;
+        color: @bgColor;
 
-		&:hover {
-			background: @linkColorHover;
-			border-color: @linkColorHover;
-		}
-	}
+        &:hover {
+            background: @linkColorHover;
+            border-color: @linkColorHover;
+        }
+    }
 }
 
 fieldset + table, table + fieldset {
-	margin-top: 10px;
+    margin-top: 10px;
 }
 
 fieldset legend a {
-	position: relative;
-	padding-bottom: 50px;
+    position: relative;
+    padding-bottom: 50px;
 }
 
 // Makes content of fieldset clickable. This is necessary because of big <a> in fieldset's legend.
@@ -139,113 +139,113 @@ fieldset > div > input, fieldset > div > select {
 }
 
 legend {
-	margin-bottom: 3px;
+    margin-bottom: 3px;
 
-	&:before, &:after {
-		content: " ";
-	}
+    &:before, &:after {
+        content: " ";
+    }
 }
 
 p input, p select, p label, fieldset input, fieldset select {
-	margin: 0 5px 5px 0;
+    margin: 0 5px 5px 0;
 }
 
 .js {
-	fieldset > .hidden {
-		display: block;
-		margin-top: 5px;
-		text-align: center;
-	}
+    fieldset > .hidden {
+        display: block;
+        margin-top: 5px;
+        text-align: center;
+    }
 
-	fieldset > .hidden * {
-		display: none !important;
-	}
+    fieldset > .hidden * {
+        display: none !important;
+    }
 
-	fieldset > .hidden:before {
-		content: "⏶";
-		font-family: "entypo", sans-serif;
-		font-size: 40pt;
-		line-height: 0;
-		vertical-align: middle;
-		color: mix(@blockBorderColor, @blockBgColor, 80%);
-	}
+    fieldset > .hidden:before {
+        content: "⏶";
+        font-family: "entypo", sans-serif;
+        font-size: 40pt;
+        line-height: 0;
+        vertical-align: middle;
+        color: mix(@blockBorderColor, @blockBgColor, 80%);
+    }
 }
 
 #fieldset-select.hidden:before {
-	content: "⚏";
+    content: "⚏";
 }
 
 #fieldset-search.hidden:before {
-	content: "🔍";
+    content: "🔍";
 }
 
 #fieldset-sort.hidden:before {
-	content: "⏷";
+    content: "⏷";
 }
 
 #fieldset-export.hidden:before {
-	content: "📤";
+    content: "📤";
 }
 
 #fieldset-import.hidden:before {
-	content: "📥";
+    content: "📥";
 }
 
 #fieldset-history.hidden:before {
-	content: "";
+    content: "";
 }
 
 #fieldset-history br {
-	display: block;
-	margin-bottom: 20px;
+    display: block;
+    margin-bottom: 20px;
 }
 
 #fieldset-history.hidden br {
-	display: none;
+    display: none;
 }
 
 #fieldset-partition.hidden:before {
-	content: "";
+    content: "";
 }
 
 .size {
-	width: 8ex;
+    width: 8ex;
 }
 
 .sqlarea {
-	max-width: 100%;
-	width: auto !important;
-	height: 350px !important;
+    max-width: 100%;
+    width: auto !important;
+    height: 350px !important;
 }
 
 @media only screen and (max-width: 768px) {
-	input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"],
-	textarea, pre[contenteditable="true"], select {
-		font-size: 12pt; /* Prevents zoom on iOS */
-		vertical-align: -1px;
-	}
+    input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"],
+    textarea, pre[contenteditable="true"], select {
+        font-size: 12pt; /* Prevents zoom on iOS */
+        vertical-align: -1px;
+    }
 
-	input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"], select {
-		height: 32px;
-	}
+    input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"], select {
+        height: 32px;
+    }
 
-	fieldset input[type="submit"] {
-		padding: 6px 15px;
-	}
+    fieldset input[type="submit"] {
+        padding: 6px 15px;
+    }
 
-	.sqlarea {
-		height: 250px !important;
-	}
+    .sqlarea {
+        height: 250px !important;
+    }
 }
 
 @media only screen and (max-width: 360px) {
-	input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"],
-	textarea, pre[contenteditable="true"], select {
-		width: 100%;
-	}
+    input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"],
+    textarea, pre[contenteditable="true"], select {
+        width: 100%;
+    }
 
-	input[type="submit"], fieldset input[type="submit"] {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
+    input[type="submit"], fieldset input[type="submit"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }

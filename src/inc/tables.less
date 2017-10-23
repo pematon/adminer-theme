@@ -1,167 +1,167 @@
 @import "variables.less";
 
 table {
-	border: 1px solid @blockBorderColor;
-	margin: 20px 0 10px 0;
+    border: 1px solid @blockBorderColor;
+    margin: 20px 0 10px 0;
 
-	label.block {
-		padding: 0;
-	}
+    label.block {
+        padding: 0;
+    }
 }
 
 tr {
-	border-bottom: 1px dotted @blockBorderColor;
+    border-bottom: 1px dotted @blockBorderColor;
 }
 
 th, td {
-	padding: 4px 10px;
+    padding: 4px 10px;
 }
 
-thead td, thead th, .odd td, tbody tr:hover td,tbody tr:hover th,
+thead td, thead th, .odd td, tbody tr:hover td, tbody tr:hover th,
 .js .checkable .checked td, .js .checkable .checked th {
-	background: transparent;
+    background: transparent;
 }
 
 thead tr {
-	background: @blockBgColor;
-	border-bottom: 1px solid @blockBorderColor;
+    background: @blockBgColor;
+    border-bottom: 1px solid @blockBorderColor;
 }
 
 thead td, thead th {
-	padding: 7px 10px;
-	background: transparent;
-	text-align: left;
+    padding: 7px 10px;
+    background: transparent;
+    text-align: left;
 }
 
 tbody th, tbody td {
-	vertical-align: top;
+    vertical-align: top;
 }
 
 tbody td[align="right"] {
-	text-align: right;
+    text-align: right;
 }
 
 tbody td[align="right"] label.block {
-	text-align: right;
+    text-align: right;
 }
 
 tbody th span {
-	padding-top: 4px;
+    padding-top: 4px;
 }
 
 /* Checkable */
 table.checkable {
-	.checked {
-		background: @lightBgColor;
-	}
+    .checked {
+        background: @lightBgColor;
+    }
 
-	input[type="checkbox"], input[type="radio"] {
-		margin: 2px 5px 2px 0;
-	}
+    input[type="checkbox"], input[type="radio"] {
+        margin: 2px 5px 2px 0;
+    }
 }
 
 table.checkable > thead {
-	a {
-		padding: 7px 0;
-	}
+    a {
+        padding: 7px 0;
+    }
 
-	input[type="checkbox"], input[type="radio"] {
-		margin: 2px 5px 2px 0;
-	}
+    input[type="checkbox"], input[type="radio"] {
+        margin: 2px 5px 2px 0;
+    }
 }
 
 table.checkable > tbody > tr:hover {
-	background: darken(#fff, 4%);
+    background: darken(#fff, 4%);
 }
 
 table.checkable > tbody > tr.checked:hover {
-	background: darken(@lightBgColor, 4%);
+    background: darken(@lightBgColor, 4%);
 }
 
 .count {
-	display: table;
-	margin-top: -10px;
-	padding: 0 10px;
-	line-height: 40px;
-	border: 1px solid @blockBorderColor;
-	border-top: none;
-	border-radius: 0 0 2px 2px;
-	background: @blockBgColor;
+    display: table;
+    margin-top: -10px;
+    padding: 0 10px;
+    line-height: 40px;
+    border: 1px solid @blockBorderColor;
+    border-top: none;
+    border-radius: 0 0 2px 2px;
+    background: @blockBgColor;
 
-	label {
-		margin: 0;
-		padding: 7px;
-	}
+    label {
+        margin: 0;
+        padding: 7px;
+    }
 }
 
 .pages {
-	left: @menuWidth + 1;
-	right: 0;
-	margin: 0;
-	padding: 0 10px;
-	border: none;
-	border-top: 1px solid @blockBorderColor;
-	background: @blockBgColor;
-	z-index: 102; // Over logout in mobile layout.
-	font-weight: bold;
+    left: @menuWidth + 1;
+    right: 0;
+    margin: 0;
+    padding: 0 10px;
+    border: none;
+    border-top: 1px solid @blockBorderColor;
+    background: @blockBgColor;
+    z-index: 102; // Over logout in mobile layout.
+    font-weight: bold;
 
-	a {
-		display: inline-block;
-		padding: 0 10px;
-		height: 40px;
-		line-height: 40px;
-	}
+    a {
+        display: inline-block;
+        padding: 0 10px;
+        height: 40px;
+        line-height: 40px;
+    }
 }
 
 .js .column {
-	background: @bgColor;
-	padding: 0;
-	margin: -36px 0 0 -62px;
-	border: 1px solid #E49254;
-	border-radius: 2px;
-	z-index: 10;
+    background: @bgColor;
+    padding: 0;
+    margin: -36px 0 0 -62px;
+    border: 1px solid #E49254;
+    border-radius: 2px;
+    z-index: 10;
 
-	a {
-		display: inline-block;
-		padding: 0;
-		width: 30px;
-		height: 30px;
-		overflow: hidden;
-		vertical-align: middle;
+    a {
+        display: inline-block;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        vertical-align: middle;
 
-		&:before {
-			display: inline-block;
-			width: 30px;
-			height: 30px;
-			line-height: 30px;
-			font-family: entypo, sans-serif;
-			font-size: 24pt;
-			text-align: center;
-			vertical-align: -3px;
-		}
+        &:before {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-family: entypo, sans-serif;
+            font-size: 24pt;
+            text-align: center;
+            vertical-align: -3px;
+        }
 
-		&:hover:before {
-			background: @lightBgColor;
-		}
-	}
+        &:hover:before {
+            background: @lightBgColor;
+        }
+    }
 
-	a[href*='&select=']:before {
-		content: "⬇";
-	}
+    a[href*='&select=']:before {
+        content: "⬇";
+    }
 
-	a[href='#fieldset-search']:before {
-		content: "🔍";
-	}
+    a[href='#fieldset-search']:before {
+        content: "🔍";
+    }
 }
 
 @media only screen and (max-width: 768px) {
-	.pages {
-		position: static;
-		margin: -10px 0 10px 0;
+    .pages {
+        position: static;
+        margin: -10px 0 10px 0;
 
-		border-top: none;
-		border-left: 1px solid @blockBorderColor;
-		border-right: 1px solid @blockBorderColor;
-		border-bottom: 1px solid @blockBorderColor;
-	}
+        border-top: none;
+        border-left: 1px solid @blockBorderColor;
+        border-right: 1px solid @blockBorderColor;
+        border-bottom: 1px solid @blockBorderColor;
+    }
 }

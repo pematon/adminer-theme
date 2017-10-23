@@ -1,72 +1,72 @@
 @import "variables.less";
 
 #lang {
-	position: fixed;
-	right: 0;
-	top: 0;
-	left: auto;
-	border: none;
-	padding: 0 0 0 10px;
-	width: 190px;
-	height: 40px;
-	line-height: 30px;
-	font-size: 0;
-	z-index: 101;
-	background: @blockBgColor;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: auto;
+    border: none;
+    padding: 0 0 0 10px;
+    width: 190px;
+    height: 40px;
+    line-height: 30px;
+    font-size: 0;
+    z-index: 101;
+    background: @blockBgColor;
 
-	select {
-		padding: 2px 3px;
-		margin: 6px 0;
-		width: 100px;
-	}
+    select {
+        padding: 2px 3px;
+        margin: 6px 0;
+        width: 100px;
+    }
 }
 
 .logout {
-	position: fixed;
-	right: 10px;
-	margin: 0;
+    position: fixed;
+    right: 10px;
+    margin: 0;
 
-	z-index: 101;
-	overflow: hidden;
+    z-index: 101;
+    overflow: hidden;
 
-	input[type="submit"] {
-		border: none;
-		margin: 0;
-		padding: 0 10px;
-		height: 40px;
-		background: transparent;
-		color: @linkColor;
+    input[type="submit"] {
+        border: none;
+        margin: 0;
+        padding: 0 10px;
+        height: 40px;
+        background: transparent;
+        color: @linkColor;
 
-		&:hover {
-			background: transparent;
-			color: @linkColorHover;
-		}
-	}
+        &:hover {
+            background: transparent;
+            color: @linkColorHover;
+        }
+    }
 }
 
 @media only screen and (max-width: 768px) {
-	#lang {
-		position: static;
-		left: 0;
-		top: 0;
-		width: auto;
-		border-top: 1px solid @blockBorderColor;
-		background: @blockBgColor;
+    #lang {
+        position: static;
+        left: 0;
+        top: 0;
+        width: auto;
+        border-top: 1px solid @blockBorderColor;
+        background: @blockBgColor;
 
-		select {
-			margin: 4px 10px 0 10px;
-		}
-	}
+        select {
+            margin: 4px 10px 0 10px;
+        }
+    }
 
-	.logout {
-		position: relative;
-		float: right;
-		margin-top: -40px;
-	}
+    .logout {
+        position: relative;
+        float: right;
+        margin-top: -40px;
+    }
 }
 
 @media only screen and (max-width: 360px) {
-	#lang select {
-		margin-left: 0;
-	}
+    #lang select {
+        margin-left: 0;
+    }
 }

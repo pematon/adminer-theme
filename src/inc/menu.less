@@ -1,287 +1,283 @@
 @import "variables.less";
 
 h1 {
-	height: 40px;
-	white-space: nowrap;
-	overflow: hidden;
+    height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
 
-	#h1 {
-		display: inline-block;
-		padding: 0;
-		background: url("../images/logo.png?3") 10px center no-repeat;
-		background-size: 120px;
-		text-indent: -100px;
-		width: 135px;
-		height: 40px;
-	}
+    #h1 {
+        display: inline-block;
+        padding: 0;
+        background: url("../images/logo.png?3") 10px center no-repeat;
+        background-size: 120px;
+        text-indent: -100px;
+        width: 135px;
+        height: 40px;
+    }
 }
 
 .version {
-	position: relative;
-	top: -7px;
-	vertical-align: bottom;
-	font-size: 8pt;
-	font-style: italic;
-	color: @note2Color;
+    position: relative;
+    top: -7px;
+    vertical-align: bottom;
+    font-size: 8pt;
+    font-style: italic;
+    color: @note2Color;
 }
 
 #version {
-	&:extend(.version);
+    &:extend(.version);
 
-	padding: 5px;
-	color: @linkColor;
+    padding: 5px;
+    color: @linkColor;
 }
 
 #version:hover {
-	color: @linkColorHover;
+    color: @linkColorHover;
 }
 
 #menu {
-	position: fixed;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	width: @menuWidth;
-	margin: 0;
-	padding: 0;
-	border-right: 1px solid @blockBorderColor;
-	overflow-y: auto;
-	overflow-x: hidden;
-	-webkit-overflow-scrolling: touch;
-	background: @bgColor;
-	z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: @menuWidth;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid @blockBorderColor;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background: @bgColor;
+    z-index: 100;
 
-	#dbs {
-		border-top: 1px solid @blockBorderColor;
-		border-bottom: none;
-		padding: 10px;
-		background: @blockBgColor;
-		color: @blockBgColor;
-		font-size: 0;
-	}
+    #dbs {
+        border-top: 1px solid @blockBorderColor;
+        border-bottom: none;
+        padding: 10px;
+        background: @blockBgColor;
+        color: @blockBgColor;
+        font-size: 0;
+    }
 
-	#dbs span {
-		font-size: 0;
-	}
+    #dbs span {
+        font-size: 0;
+    }
 
-	#dbs select {
-		margin: 0;
-		width: 100%;
-	}
+    #dbs select {
+        margin: 0;
+        width: 100%;
+    }
 
-	.links {
-		background: @blockBgColor;
-		border-bottom: 1px solid @blockBorderColor;
-		padding: 0 10px 7px 10px;
-	}
+    .links {
+        background: @blockBgColor;
+        border-bottom: 1px solid @blockBorderColor;
+        padding: 0 10px 7px 10px;
+    }
 
-	#tables, #logins {
-		border-bottom: 1px solid @blockBorderColor;
-		padding: 0;
-	}
+    #tables, #logins {
+        border-bottom: 1px solid @blockBorderColor;
+        padding: 0;
+    }
 
-	.message {
-		background: transparent;
-		border: none;
-		border-bottom: 1px solid @blockBorderColor;
-		color: @note2Color;
-	}
+    .message {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid @blockBorderColor;
+        color: @note2Color;
+    }
 }
 
 .menuLink {
-	display: block;
-	padding: 2px 10px;
-	width: auto;
-	height: 20px;
-	line-height: 20px;
-	color: @textColor;
-	text-overflow: ellipsis;
+    display: block;
+    padding: 2px 10px;
+    width: auto;
+    height: 20px;
+    line-height: 20px;
+    color: @textColor;
+    text-overflow: ellipsis;
 
-	&.active {
-		color: @linkColor;
-		font-weight: bold;
-	}
+    &.active {
+        color: @linkColor;
+        font-weight: bold;
+    }
 }
 
 #tables {
-	a[href*="&table="] {
-		.menuLink();
-		padding-right: 30px;
-	}
+    a[href*="&table="] {
+        .menuLink();
+        padding-right: 30px;
+    }
 
-	a[href*="&table="]:hover {
-		background: @menuHoverColor;
-	}
+    a[href*="&table="]:hover {
+        background: @menuHoverColor;
+    }
 
-	a[href*="&select="] {
-		float: right;
-		display: block;
-		padding: 2px 7px;
-		height: 20px;
-		line-height: 20px;
-		color: @noteColor !important;
-		overflow: hidden;
-		width: 16px;
+    a[href*="&select="] {
+        float: right;
+        display: block;
+        padding: 2px 7px;
+        height: 20px;
+        line-height: 20px;
+        color: @noteColor !important;
+        overflow: hidden;
+        width: 16px;
 
-		&:hover {
-			color: @textColor !important;
-		}
+        &:hover {
+            color: @textColor !important;
+        }
 
-		&:before {
-			content: "📄  ";
-			font-family: entypo, sans-serif;
-			font-size: 24pt;
-			line-height: 0;
-			vertical-align: -3px;
-		}
-	}
+        &:before {
+            content: "📄  ";
+            font-family: entypo, sans-serif;
+            font-size: 24pt;
+            line-height: 0;
+            vertical-align: -3px;
+        }
+    }
 
-	a[href*="&table="]:nth-child(2), a[href*="&select="]:first-child {
-		padding-top: 7px;
-	}
+    a[href*="&table="]:nth-child(2), a[href*="&select="]:first-child {
+        padding-top: 7px;
+    }
 
-	a[href*="&table="]:nth-last-child(2), a[href*="&select="]:nth-last-child(3) {
-		padding-bottom: 7px;
-	}
+    a[href*="&table="]:nth-last-child(2), a[href*="&select="]:nth-last-child(3) {
+        padding-bottom: 7px;
+    }
 
-	a.active + a {
-		color: @linkColor;
-		font-weight: bold;
-	}
+    a.active + a {
+        color: @linkColor;
+        font-weight: bold;
+    }
 
-	br {
-		display: none;
-	}
+    br {
+        display: none;
+    }
 }
 
 // AdminerSimpleMenu plugin
 #tables.simple {
-	a {
-		.menuLink();
-	}
+    a {
+        .menuLink();
+    }
 
-	a[href*="&select="] {
-		.menuLink();
-		float: none;
-		color: @textColor !important;
+    a[href*="&select="] {
+        .menuLink();
+        float: none;
+        color: @textColor !important;
 
-		&.active {
-			color: @linkColor !important;
-		}
+        &.active {
+            color: @linkColor !important;
+        }
 
-		&:before {
-			content: "";
-		}
-	}
+        &:before {
+            content: "";
+        }
+    }
 
-	li:hover {
-		background: @menuHoverColor;
-	}
+    li:hover {
+        background: @menuHoverColor;
+    }
 
-	li:first-child a {
-		padding-top: 7px;
-	}
+    li:first-child a {
+        padding-top: 7px;
+    }
 
-	li:last-child a {
-		padding-bottom: 7px;
-	}
+    li:last-child a {
+        padding-bottom: 7px;
+    }
 }
 
 #logins {
-	border-top: 1px solid @blockBorderColor;
+    border-top: 1px solid @blockBorderColor;
 
-	a {
-		.menuLink();
-	}
+    a {
+        .menuLink();
+    }
 
-	a:hover {
-		background: @menuHoverColor;
-	}
+    a:hover {
+        background: @menuHoverColor;
+    }
 
-	a:first-of-type {
-		padding-top: 7px;
-	}
+    a:first-of-type {
+        padding-top: 7px;
+    }
 
-	a:last-of-type {
-		padding-bottom: 7px;
-	}
+    a:last-of-type {
+        padding-bottom: 7px;
+    }
 
-	br {
-		display: none;
-	}
+    br {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-	h1 {
-		&:before {
-			float: left;
-			position: relative;
-			left: 4px;
-			top: 4px;
-			width: 30px;
-			height: 30px;
-			content: "☰";
-			font-family: "entypo", sans-serif;
-			font-size: 32pt;
-			line-height: 30px;
-			border: 1px solid @lightBorderColor;
-			border-radius: 2px;
-			text-align: center;
-			vertical-align: middle;
-			background: @bgColor;
-			cursor: pointer;
-		}
+    h1 {
+        &:before {
+            float: left;
+            position: relative;
+            left: 4px;
+            top: 4px;
+            width: 30px;
+            height: 30px;
+            content: "☰";
+            font-family: "entypo", sans-serif;
+            font-size: 32pt;
+            line-height: 30px;
+            border: 1px solid @lightBorderColor;
+            border-radius: 2px;
+            text-align: center;
+            vertical-align: middle;
+            background: @bgColor;
+            cursor: pointer;
+        }
 
-		#h1 {
-			margin-left: 10px;
-		}
-	}
+        #h1 {
+            margin-left: 10px;
+        }
+    }
 
-	#menu {
-		width: 40px;
-		height: 40px;
-		bottom: auto;
-		border: none;
-		overflow: hidden;
-		background: transparent;
+    #menu {
+        width: 40px;
+        height: 40px;
+        bottom: auto;
+        border: none;
+        overflow: hidden;
+        background: transparent;
 
-		form, p {
-			display: none;
-		}
+        form, p {
+            display: none;
+        }
 
-		&.open {
-			width: @menuWidth;
-			height: auto;
-			max-width: 100%;
-			max-height: 100%;
-			border-right: 1px solid @blockBorderColor;
-			border-bottom: 5px solid @blockBorderColor;
-			background: @bgColor;
-			box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.03);
-			z-index: 200;
-			overflow-y: auto;
+        &.open {
+            width: @menuWidth;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            border-right: 1px solid @blockBorderColor;
+            border-bottom: 5px solid @blockBorderColor;
+            background: @bgColor;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.03);
+            z-index: 200;
+            overflow-y: auto;
 
-			form, p {
-				display: block;
-			}
-		}
-	}
+            form, p {
+                display: block;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 270px) {
-	#menu.open {
-		border-right: none;
-	}
+    #menu.open {
+        border-right: none;
+    }
 }
 
 // Retina
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	only screen and (min--moz-device-pixel-ratio: 1.5),
-	only screen and (-o-min-device-pixel-ratio: 3/2),
-	only screen and (min-device-pixel-ratio: 1.5)
-{
-	h1 #h1 {
-		background-image: url("../images/logo-hres.png?3");
-		background-size: 120px;
-	}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+    h1 #h1 {
+        background-image: url("../images/logo-hres.png?3");
+        background-size: 120px;
+    }
 }

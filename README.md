@@ -26,7 +26,7 @@ File structure will be:
 - adminer.php
 ```
 
-3. Create index.php file and [configure plugins](http://www.adminer.org/plugins/#use).
+3. Create index.php file and [configure plugins](http://www.adminer.org/plugins/#use). Don't forget to copy official [plugin.php](https://raw.githubusercontent.com/vrana/adminer/master/plugins/plugin.php) into the `plugins` folder.
 
 ```php
 <?php

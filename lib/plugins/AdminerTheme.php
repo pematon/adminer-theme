@@ -57,15 +57,13 @@ class AdminerTheme
 
         <link rel="stylesheet" type="text/css" href="css/<?php echo htmlspecialchars($this->themeName) ?>.css?3">
 
-        <script>
-            (function(window) {
+        <script <?php echo nonce(); ?>>
+            (function(document) {
                 "use strict";
 
-                window.addEventListener("load", function() {
-                    prepareMenuButton();
-                }, false);
+                document.addEventListener("DOMContentLoaded", init, false);
 
-                function prepareMenuButton() {
+                function init() {
                     var menu = document.getElementById("menu");
                     var button = menu.getElementsByTagName("h1")[0];
                     if (!menu || !button) {
@@ -81,7 +79,7 @@ class AdminerTheme
                     }, false);
                 }
 
-            })(window);
+            })(document);
 
         </script>
 
@@ -90,5 +88,31 @@ class AdminerTheme
         // Return false to disable linking of adminer.css and original favicon.
         // Warning! This will stop executing head() function in all plugins defined after AdminerTheme.
         return false;
+    }
+
+    /**
+     * Returns Content Security Policy headers.
+     * @note This is just workaround for Adminer version 4.4.0.
+     *
+     * @return array Array of arrays with directive name in key, allowed sources in value.
+     */
+    public function csp()
+    {
+        $csp = csp();
+
+        if (isset($csp[0]["default-src"])) {
+            unset($csp[0]["default-src"]);
+        }
+        if (isset($csp[0]["img-src"])) {
+            unset($csp[0]["img-src"]);
+        }
+        if (!isset($csp[0]["object-src"])) {
+            $csp[0]["object-src"] = "'none'";
+        }
+        if (!isset($csp[0]["base-uri"])) {
+            $csp[0]["base-uri"] = "'none'";
+        }
+
+        return $csp;
     }
 }

@@ -88,13 +88,14 @@ h1 {
     }
 }
 
-.menuLink {
+.menu-link {
     display: block;
     padding: 2px 10px;
     width: auto;
     height: 20px;
     line-height: 20px;
     color: @textColor;
+    overflow: hidden;
     text-overflow: ellipsis;
 
     &.active {
@@ -105,8 +106,8 @@ h1 {
 
 #tables {
     a[href*="&table="] {
-        .menuLink();
-        padding-right: 30px;
+        .menu-link();
+        padding-right: 0;
     }
 
     a[href*="&table="]:hover {
@@ -136,11 +137,11 @@ h1 {
         }
     }
 
-    a[href*="&table="]:nth-child(2), a[href*="&select="]:first-child {
+    li:first-of-type a {
         padding-top: 7px;
     }
 
-    a[href*="&table="]:nth-last-child(2), a[href*="&select="]:nth-last-child(3) {
+    li:last-child a {
         padding-bottom: 7px;
     }
 
@@ -157,11 +158,11 @@ h1 {
 // AdminerSimpleMenu plugin
 #tables.simple {
     a {
-        .menuLink();
+        .menu-link();
     }
 
     a[href*="&select="] {
-        .menuLink();
+        .menu-link();
         float: none;
         color: @textColor !important;
 
@@ -191,7 +192,7 @@ h1 {
     border-top: 1px solid @blockBorderColor;
 
     a {
-        .menuLink();
+        .menu-link();
     }
 
     a:hover {

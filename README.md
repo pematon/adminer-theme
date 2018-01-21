@@ -72,7 +72,7 @@ Final file structure will be:
 ```
 
 ## Compatibility
-Theme is compatible with Adminer 4.1 and newer.
+Minimal requirements: PHP 5.4, Adminer 4.4.0.
 
 Only last versions of modern web browsers are supported. There is no backward compatibility with old versions (especially IE).
 

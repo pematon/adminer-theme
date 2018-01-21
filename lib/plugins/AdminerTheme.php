@@ -4,6 +4,8 @@
  * Adds support for Pematon's custom theme.
  * This includes meta headers, touch icons and other stuff.
  *
+ * @link https://github.com/pematon/adminer-theme
+ *
  * @author Peter Knut
  * @copyright 2014-2018 Pematon, s.r.o. (http://www.pematon.com/)
  */

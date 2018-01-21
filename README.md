@@ -49,7 +49,7 @@ File structure will be:
 			// Color variant can by specified in constructor parameter.
 			// new AdminerTheme("default-orange"),
 			// new AdminerTheme("default-blue"),
-			// new AdminerTheme("default-green"),
+			// new AdminerTheme("default-green", ["192.168.0.1" => "default-orange"]),
 		];
 
 		return new AdminerPlugin($plugins);

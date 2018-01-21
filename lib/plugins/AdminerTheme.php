@@ -5,7 +5,7 @@
  * This includes meta headers, touch icons and other stuff.
  *
  * @author Peter Knut
- * @copyright 2014-2017 Pematon, s.r.o. (http://www.pematon.com/)
+ * @copyright 2014-2018 Pematon, s.r.o. (http://www.pematon.com/)
  */
 class AdminerTheme
 {
@@ -13,13 +13,17 @@ class AdminerTheme
     private $themeName;
 
     /**
-     * @param string $themeName File with this name and .css extension should be located in css folder.
+     * Default theme and/or multiple theme names for given hosts can be specified in constructor.
+     * File with theme name and .css extension should be located in css folder.
+     *
+     * @param string $defaultTheme Theme name of default theme.
+     * @param array $themes array(database-host => theme-name).
      */
-    function __construct($themeName = "default-orange")
+    function __construct($defaultTheme = "default-orange", array $themes = [])
     {
         define("PMTN_ADMINER_THEME", true);
 
-        $this->themeName = $themeName;
+        $this->themeName = isset($themes[SERVER]) ? $themes[SERVER] : $defaultTheme;
     }
 
     /**

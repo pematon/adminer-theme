@@ -42,7 +42,7 @@ File structure will be:
 		}
 
 		// Specify enabled plugins here.
-		$plugins = array(
+		$plugins = [
 			// AdminerTheme has to be the last one!
 			new AdminerTheme(),
 			
@@ -50,7 +50,7 @@ File structure will be:
 			// new AdminerTheme("default-orange"),
 			// new AdminerTheme("default-blue"),
 			// new AdminerTheme("default-green"),
-		);
+		];
 
 		return new AdminerPlugin($plugins);
 	}

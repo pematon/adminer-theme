@@ -11,6 +11,9 @@
  */
 class AdminerTheme
 {
+    const CSS_VERSION = 4;
+    const ICONS_VERSION = 3;
+
     /** @var string */
     private $themeName;
 
@@ -52,16 +55,16 @@ class AdminerTheme
             <meta name="msapplication-wide310x150logo" content="images/tileIcon-wide.png"/>
 
         <?php elseif (strpos($userAgent, "iPhone") !== false || strpos($userAgent, "iPad") !== false): ?>
-            <link rel="apple-touch-icon-precomposed" href="images/touchIcon.png"/>
+            <link rel="apple-touch-icon-precomposed" href="images/touchIcon.png?<?php echo self::ICONS_VERSION ?>"/>
 
         <?php elseif (strpos($userAgent, "Android") !== false): ?>
-            <link rel="apple-touch-icon-precomposed" href="images/touchIcon-android.png?2"/>
+            <link rel="apple-touch-icon-precomposed" href="images/touchIcon-android.png?<?php echo self::ICONS_VERSION ?>"/>
 
         <?php else: ?>
-            <link rel="apple-touch-icon" href="images/touchIcon.png"/>
+            <link rel="apple-touch-icon" href="images/touchIcon.png?<?php echo self::ICONS_VERSION ?>"/>
         <?php endif; ?>
 
-        <link rel="stylesheet" type="text/css" href="css/<?php echo htmlspecialchars($this->themeName) ?>.css?3">
+        <link rel="stylesheet" type="text/css" href="css/<?php echo htmlspecialchars($this->themeName) ?>.css?<?php echo self::CSS_VERSION ?>">
 
         <script <?php echo nonce(); ?>>
             (function(document) {

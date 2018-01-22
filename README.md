@@ -11,6 +11,9 @@ Three color variants included.
 
 You can also try our useful [**plugins**](https://github.com/pematon/adminer-plugins) or our custom Adminer configuration in [**all-in-one bundle**](https://github.com/pematon/adminer-custom).
 
+## Compatibility
+Minimal requirements are: PHP 5.4, Adminer 4.4.0, modern web browser.
+
 ## How to use
 
 1. [Download](http://www.adminer.org/#download) and install Adminer tool.
@@ -70,11 +73,6 @@ Final file structure will be:
 - adminer.php
 - index.php
 ```
-
-## Compatibility
-Minimal requirements: PHP 5.4, Adminer 4.4.0.
-
-Only last versions of modern web browsers are supported. There is no backward compatibility with old versions (especially IE).
 
 ## References
 Amazing **Entypo** pictograms are created by Daniel Bruce ([www.entypo.com](http://www.entypo.com/)).

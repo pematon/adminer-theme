@@ -3,7 +3,7 @@
 #content {
     position: relative;
     margin: 0 0 0 (@menuWidth + 1);
-    padding: 41px 20px 40px 20px; // Bottom padding creates space for table paginator.
+    padding: 41px 20px 80px 20px; // Bottom padding creates space for table paginator.
 
     &:before {
         position: fixed;
@@ -137,7 +137,7 @@ pre + .message, pre + .error {
     background-color: @linkColorHover;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: @mobileThreshold) {
     #content {
         margin-left: 0;
     }

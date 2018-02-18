@@ -218,7 +218,7 @@ p input, p select, p label, fieldset input, fieldset select {
     height: 350px !important;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: @mobileThreshold) {
     input:not([type]), input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"],
     textarea, pre[contenteditable="true"], select {
         font-size: 12pt; /* Prevents zoom on iOS */

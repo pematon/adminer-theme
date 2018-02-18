@@ -78,25 +78,16 @@ table.checkable > tbody > tr.checked:hover {
     background: darken(@lightBgColor, 4%);
 }
 
-.count {
-    display: table;
-    margin-top: -10px;
-    padding: 0 10px;
-    line-height: 40px;
-    border: 1px solid @blockBorderColor;
-    border-top: none;
-    border-radius: 0 0 2px 2px;
-    background: @blockBgColor;
-
-    label {
-        margin: 0;
-        padding: 7px;
-    }
+.footer {
+    position: relative;
+    padding: 0;
 }
 
-.pages {
+.footer > p {
+    position: fixed;
     left: @menuWidth + 1;
     right: 0;
+    bottom: 0;
     margin: 0;
     padding: 0 10px;
     border: none;
@@ -105,8 +96,9 @@ table.checkable > tbody > tr.checked:hover {
     z-index: 102; // Over logout in mobile layout.
     font-weight: bold;
 
-    a {
+    a, label {
         display: inline-block;
+        margin: 0;
         padding: 0 10px;
         height: 40px;
         line-height: 40px;
@@ -154,8 +146,8 @@ table.checkable > tbody > tr.checked:hover {
     }
 }
 
-@media only screen and (max-width: 768px) {
-    .pages {
+@media only screen and (max-width: @mobileThreshold) {
+    .footer > p {
         position: static;
         margin: -10px 0 10px 0;
 

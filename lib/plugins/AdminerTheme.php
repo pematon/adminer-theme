@@ -11,7 +11,7 @@
  */
 class AdminerTheme
 {
-    const CSS_VERSION = 4;
+    const CSS_VERSION = 5;
     const ICONS_VERSION = 3;
 
     /** @var string */

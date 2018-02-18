@@ -12,7 +12,7 @@ Three color variants included.
 You can also try our useful [**plugins**](https://github.com/pematon/adminer-plugins) or our custom Adminer configuration in [**all-in-one bundle**](https://github.com/pematon/adminer-custom).
 
 ## Compatibility
-Minimal requirements are: PHP 5.4, Adminer 4.4.0, modern web browser.
+Minimal requirements are: PHP 5.4, Adminer 4.6.1, modern web browser.
 
 ## How to use
 

@@ -51,22 +51,9 @@ h1 {
     background: @bgColor;
     z-index: 100;
 
-    #dbs {
-        border-top: 1px solid @blockBorderColor;
-        border-bottom: none;
+    p {
         padding: 10px;
-        background: @blockBgColor;
-        color: @blockBgColor;
-        font-size: 0;
-    }
-
-    #dbs span {
-        font-size: 0;
-    }
-
-    #dbs select {
-        margin: 0;
-        width: 100%;
+        border-bottom: none;
     }
 
     .links {
@@ -75,18 +62,23 @@ h1 {
         padding: 0 10px 7px 10px;
     }
 
-    #tables, #logins {
-        border-bottom: 1px solid @blockBorderColor;
-        padding: 0;
-        margin-bottom: 25px;
-    }
-
     .message {
         background: transparent;
         border: none;
         border-bottom: 1px solid @blockBorderColor;
         color: @note2Color;
     }
+}
+
+#filter-field {
+    margin: 0;
+    width: 100%;
+}
+
+.menu-list {
+    border-bottom: 1px solid @blockBorderColor;
+    padding: 0;
+    margin-bottom: 25px;
 }
 
 .menu-link {
@@ -100,34 +92,62 @@ h1 {
     text-overflow: ellipsis;
 
     &.active {
+        background: @lightBgColor;
         color: @linkColor;
-        font-weight: bold;
+
+        &:hover {
+            background: @lightBgColorHover;
+        }
+    }
+}
+
+p#dbs {
+    border-top: 1px solid @blockBorderColor;
+    background: @blockBgColor;
+    color: @blockBgColor;
+    font-size: 0;
+
+    span {
+        font-size: 0;
+    }
+
+    select {
+        margin: 0;
+        width: 100%;
     }
 }
 
 #tables {
+    .menu-list();
+
+    li {
+        position: relative;
+
+        &:hover {
+            background: @menuHoverColor;
+        }
+    }
+
+    a strong {
+        font-weight: bold;
+    }
+
     a[href*="&table="] {
         .menu-link();
         padding-right: 0;
     }
 
-    a[href*="&table="]:hover {
-        background: @menuHoverColor;
-    }
-
     a[href*="&select="] {
-        float: right;
+        position: absolute;
+        right: 0;
+        top: 0;
         display: block;
         padding: 2px 7px;
         height: 20px;
         line-height: 20px;
-        color: @noteColor !important;
+        color: @noteColor;
         overflow: hidden;
         width: 16px;
-
-        &:hover {
-            color: @textColor !important;
-        }
 
         &:before {
             content: "📄  ";
@@ -147,8 +167,21 @@ h1 {
     }
 
     a.active + a {
+        background: @lightBgColor;
         color: @linkColor;
         font-weight: bold;
+
+        &:hover {
+            background: @lightBgColorHover;
+        }
+    }
+
+    a.active:hover + a {
+        background: @lightBgColorHover;
+    }
+
+    a:hover + a.active {
+        background: @lightBgColorHover;
     }
 
     br {
@@ -164,12 +197,8 @@ h1 {
 
     a[href*="&select="] {
         .menu-link();
-        float: none;
-        color: @textColor !important;
-
-        &.active {
-            color: @linkColor !important;
-        }
+        position: static;
+        color: @textColor;
 
         &:before {
             content: "";
@@ -190,6 +219,8 @@ h1 {
 }
 
 #logins {
+    .menu-list();
+
     border-top: 1px solid @blockBorderColor;
 
     a {

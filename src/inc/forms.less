@@ -121,6 +121,10 @@ fieldset {
             border-color: @linkColorHover;
         }
     }
+
+    a {
+        padding: 6px 8px;
+    }
 }
 
 fieldset + table, table + fieldset {
@@ -129,12 +133,12 @@ fieldset + table, table + fieldset {
 
 fieldset legend a {
     position: relative;
-    padding-bottom: 50px;
+    padding: 4px 0 50px;
 }
 
 // Makes content of fieldset clickable. This is necessary because of big <a> in fieldset's legend.
 fieldset > div > div, fieldset > div > p, fieldset > div > a, fieldset > div > code,
-fieldset > div > input, fieldset > div > select {
+fieldset > div > input, fieldset > div > select, fieldset > a {
     position: relative;
 }
 

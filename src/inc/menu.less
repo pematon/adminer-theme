@@ -76,9 +76,10 @@ h1 {
 }
 
 .menu-list {
-    border-bottom: 1px solid @blockBorderColor;
-    padding: 0;
-    margin-bottom: 25px;
+    // !important is here because we need to override
+    border-bottom: 1px solid @blockBorderColor !important;
+    padding: 0 !important;
+    margin-bottom: 25px !important  ;
 }
 
 .menu-link {

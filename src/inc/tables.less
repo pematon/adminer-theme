@@ -85,30 +85,48 @@ table.checkable > tbody > tr.checked:hover {
     background: @lightBgColorHover;
 }
 
+.loadmore {
+    margin: 0;
+    padding: 10px 0;
+}
+
 .footer {
     position: relative;
     padding: 0;
-}
 
-.footer > p {
-    position: fixed;
-    left: @menuWidth + 1;
-    right: 0;
-    bottom: 0;
-    margin: 0;
-    padding: 0 10px;
-    border: none;
-    border-top: 1px solid @blockBorderColor;
-    background: @blockBgColor;
-    z-index: 102; // Over logout in mobile layout.
-    font-weight: bold;
+    & > div {
+        padding: 0;
+    }
 
-    a, label {
-        display: inline-block;
+    & > p {
+        position: fixed;
+        left: @menuWidth + 1;
+        right: 0;
+        bottom: 0;
         margin: 0;
         padding: 0 10px;
-        height: 40px;
-        line-height: 40px;
+        border: none;
+        border-top: 1px solid @blockBorderColor;
+        background: @blockBgColor;
+        z-index: 102; // Over logout in mobile layout.
+        font-weight: bold;
+
+        a, label {
+            display: inline-block;
+            margin: 0;
+            padding: 0 10px;
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+}
+
+// Import block under the table pagination.
+.footer + div {
+    line-height: 36px;
+
+    a {
+        padding: 10px 0;
     }
 }
 

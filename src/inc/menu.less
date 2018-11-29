@@ -133,12 +133,12 @@ p#dbs {
         font-weight: bold;
     }
 
-    a[href*="&table="] {
+    a.structure {
         .menu-link();
         padding-right: 0;
     }
 
-    a[href*="&select="] {
+    a.select {
         position: absolute;
         right: 0;
         top: 0;
@@ -194,28 +194,6 @@ p#dbs {
 #tables.simple {
     a {
         .menu-link();
-    }
-
-    a[href*="&select="] {
-        .menu-link();
-        position: static;
-        color: @textColor;
-
-        &:before {
-            content: "";
-        }
-    }
-
-    li:hover {
-        background: @menuHoverColor;
-    }
-
-    li:first-child a {
-        padding-top: 7px;
-    }
-
-    li:last-child a {
-        padding-bottom: 7px;
     }
 }
 

@@ -86,7 +86,8 @@ table.checkable > tbody > tr.checked:hover {
 }
 
 .scrollable {
-    overflow-x: visible;
+    display: table-cell;
+    padding-right: 20px;
 }
 
 .loadmore {
@@ -184,5 +185,12 @@ table.checkable > tbody > tr.checked:hover {
         border-left: 1px solid @blockBorderColor;
         border-right: 1px solid @blockBorderColor;
         border-bottom: 1px solid @blockBorderColor;
+    }
+
+    .scrollable {
+        display: block;
+        margin: 0 -20px;
+        padding: 0 20px;
+        overflow-x: scroll;
     }
 }

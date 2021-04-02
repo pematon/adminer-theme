@@ -28,7 +28,9 @@ class AdminerTheme
     {
         define("PMTN_ADMINER_THEME", true);
 
-        $this->themeName = isset($_GET["username"]) && isset($themes[SERVER]) ? $themes[SERVER] : $defaultTheme;
+        $this->themeName = isset($_GET["username"]) && isset($_GET["server"]) && isset($themes[$_GET["server"]])
+            ? $themes[$_GET["server"]]
+            : $defaultTheme;
     }
 
     /**

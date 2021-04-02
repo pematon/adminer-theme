@@ -14,6 +14,8 @@ h1 {
         width: 135px;
         height: 40px;
     }
+
+    border-bottom: 1px solid @blockBorderColor;
 }
 
 .version {
@@ -103,7 +105,6 @@ h1 {
 }
 
 p#dbs {
-    border-top: 1px solid @blockBorderColor;
     background: @blockBgColor;
     color: @blockBgColor;
     font-size: 0;
@@ -157,6 +158,18 @@ p#dbs {
             line-height: 0;
             vertical-align: -3px;
         }
+
+        &:last-child {
+            position: relative;
+            width: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: @textColor;
+
+            &:before {
+                content: "";
+            }
+        }
     }
 
     li:first-of-type a {
@@ -167,7 +180,7 @@ p#dbs {
         padding-bottom: 7px;
     }
 
-    a.active + a {
+    a.active + a, a.active:last-child {
         background: @lightBgColor;
         color: @linkColor;
         font-weight: bold;
@@ -199,8 +212,6 @@ p#dbs {
 
 #logins {
     .menu-list();
-
-    border-top: 1px solid @blockBorderColor;
 
     a {
         .menu-link();

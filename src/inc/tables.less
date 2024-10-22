@@ -7,14 +7,23 @@ table {
     label.block {
         padding: 0;
     }
+
+    &.dragging {
+        background: @bgColor;
+        border-color: fade(@blockBorderColor, 50%);
+    }
 }
 
 tr {
-    border-bottom: 1px dotted @blockBorderColor;
+    border-bottom: 1px solid fade(@blockBorderColor, 50%);
 }
 
 th, td {
     padding: 4px 10px;
+}
+
+th.handle {
+    padding: 4px;
 }
 
 th[style="text-align: right;"], td[align="right"] {

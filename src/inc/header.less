@@ -14,6 +14,10 @@
     z-index: 101;
     background: @blockBgColor;
 
+    form {
+        font-size: 0;
+    }
+
     select {
         padding: 2px 3px;
         margin: 6px 0;
@@ -25,6 +29,8 @@
     position: fixed;
     right: 10px;
     margin: 0;
+    height: 40px;
+    line-height: 40px;
 
     z-index: 101;
     overflow: hidden;
@@ -40,6 +46,33 @@
         &:hover {
             background: transparent;
             color: @linkColorHover;
+        }
+    }
+}
+
+#footer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 101;
+    background: @blockBgColor;
+
+    #lang {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+    }
+
+    .logout {
+        padding: 0 10px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        right: 0;
+
+        input[type="submit"] {
+            margin-top: -3px;
         }
     }
 }
@@ -62,6 +95,22 @@
         position: relative;
         float: right;
         margin-top: -40px;
+    }
+
+    #footer {
+        position: static;
+        border-top: 1px solid @blockBorderColor;
+        height: auto;
+        overflow: hidden;
+
+        #lang {
+            border-top: none;
+        }
+
+        .logout {
+            margin-top: 0;
+            height: auto;
+        }
     }
 }
 

@@ -81,6 +81,9 @@ input[type="image"] {
     outline: 1px solid mix(@linkColor, @bgColor, 30%);
     -moz-outline-radius: 2px;
     margin-right: 5px;
+    margin-top: 0;
+    width: 26px;
+    height: 26px;
 
     &:last-child {
         margin-right: 0;
@@ -97,7 +100,7 @@ input[type="checkbox"], input[type="radio"] {
 
 fieldset {
     margin: 5px 5px 10px 0;
-    padding: 5px 10px;
+    padding: 5px 10px 7px;
     border: 1px solid @blockBorderColor;
     border-radius: 2px;
     background: @blockBgColor;
@@ -129,6 +132,23 @@ fieldset {
     a {
         padding: 6px 8px;
     }
+
+    p:first-of-type {
+        margin-top: 0;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    p label:first-child {
+        padding-left: 0;
+
+        // Ugly hack for "?" in global search.
+        & + a {
+            margin-left: -20px;
+        }
+    }
 }
 
 fieldset + table, table + fieldset {
@@ -154,8 +174,8 @@ legend {
     }
 }
 
-p input, p select, p label, fieldset input, fieldset select {
-    margin: 0 5px 5px 0;
+p input, p select, p label, fieldset input, fieldset select, div.dragging {
+    margin: 3px 0;
 }
 
 .js {

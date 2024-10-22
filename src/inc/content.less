@@ -137,6 +137,32 @@ pre + .message, pre + .error {
     background-color: @linkColorHover;
 }
 
+.handle {
+    &:before {
+        width: 28px;
+        height: 28px;
+        font-size: 160%;
+        line-height: 22px;
+    }
+}
+
+.no-sort .handle {
+    &:before {
+        font-size: 160%;
+        line-height: 28px;
+    }
+}
+
+.dragging {
+    background: @blockBgColor;
+}
+
+span.handle {
+    width: 28px;
+    height: 28px;
+    margin-top: -3px;
+}
+
 @media only screen and (max-width: @mobileThreshold) {
     #content {
         margin-left: 0;

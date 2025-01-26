@@ -9,7 +9,8 @@ Three color variants included.
 
 <img src="http://pematon.github.io/screenshots/adminer-vriants.png" width="620px" />
 
-You can also try our useful [**plugins**](https://github.com/pematon/adminer-plugins) or our custom Adminer configuration in [**all-in-one bundle**](https://github.com/pematon/adminer-custom).
+## End of life 
+This project is almost at the end of its life. We switched to 👉 [our own Adminer fork](https://github.com/pematon/adminer) 👈 some time ago and now we are moving forward to version 5. This will include a new theme and configuration that will replace [adminer-theme](https://github.com/pematon/adminer-theme) and all plugins in [adminer-plugins](https://github.com/pematon/adminer-plugins).
 
 ## Compatibility
 Minimal requirements are: PHP 5.4, Adminer 4.6.1, modern web browser.

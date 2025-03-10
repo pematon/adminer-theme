@@ -1,6 +1,12 @@
 Theme for Adminer
 =================
 
+## End of life 
+
+⚠️ This theme has been integrated into the upcomming [AdminNeo 5](https://github.com/adminneo-org/adminneo) and is no longer compatible with Adminer 5.
+
+## Info
+
 Responsive touch-friendly theme for Adminer database tool ([www.adminer.org](http://www.adminer.org/)).
 
 <img src="http://pematon.github.io/screenshots/adminer.png?4" width="728px" />
@@ -9,11 +15,12 @@ Three color variants included.
 
 <img src="http://pematon.github.io/screenshots/adminer-vriants.png" width="620px" />
 
-## End of life 
-This project is almost at the end of its life. We switched to 👉 [our own Adminer fork](https://github.com/pematon/adminer) 👈 some time ago and now we are moving forward to version 5. This will include a new theme and configuration that will replace [adminer-theme](https://github.com/pematon/adminer-theme) and all plugins in [adminer-plugins](https://github.com/pematon/adminer-plugins).
-
 ## Compatibility
-Minimal requirements are: PHP 5.4, Adminer 4.6.1, modern web browser.
+
+- PHP 5.4+
+- Adminer 4.6.1-4.17
+- AdmminNeo 4.9-4.17
+- modern web browser
 
 ## How to use
 
